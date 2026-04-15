@@ -44,3 +44,4 @@ This landing page positions a solo technical studio that:
 - This is a single static page built for GitHub Pages.
 - No backend services are included.
 - The contact form uses `mailto:` with your email address.
+# live
