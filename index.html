@@ -17,6 +17,7 @@
         <nav>
           <a href="#services">Services</a>
           <a href="#work">Why it works</a>
+          <a href="#calculator">Calculator</a>
           <a href="#pricing">Pricing</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -47,6 +48,10 @@
             <div>
               <strong>13 retainers</strong>
               <span>Ongoing product operations</span>
+            </div>
+            <div>
+              <strong>95% satisfaction</strong>
+              <span>Client retention rate</span>
             </div>
           </div>
         </div>
@@ -178,6 +183,39 @@
             The result was a polished app and a clean handoff for growth.”</p>
             <strong>— Priya, startup CEO</strong>
           </article>
+          <article class="review-card">
+            <p>“The AI-accelerated approach saved us time and money. Our marketplace went live ahead of schedule
+            with features we didn't think possible in that timeframe.”</p>
+            <strong>— Alex, CTO</strong>
+          </article>
+          <article class="review-card">
+            <p>“Reliable and professional. Handled our complex SaaS requirements seamlessly,
+            and the ongoing support has been invaluable for our growth.”</p>
+            <strong>— Maria, product manager</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section guarantees-section">
+        <p class="section-label">Why trust us</p>
+        <h2>Guaranteed quality and delivery.</h2>
+        <div class="guarantees-grid">
+          <article>
+            <h3>IP Protection</h3>
+            <p>All code and designs are delivered with full ownership rights. NDA signed for confidentiality.</p>
+          </article>
+          <article>
+            <h3>30-Day Support</h3>
+            <p>Free bug fixes and support for 30 days post-launch to ensure smooth operation.</p>
+          </article>
+          <article>
+            <h3>AI-Enhanced Accuracy</h3>
+            <p>Leveraging AI tools for precise requirements analysis and robust, error-free code.</p>
+          </article>
+          <article>
+            <h3>On-Time Delivery</h3>
+            <p>95% of projects delivered on or ahead of schedule with transparent progress updates.</p>
+          </article>
         </div>
       </section>
 
@@ -206,6 +244,37 @@
         </p>
       </section>
 
+      <section id="calculator" class="section calculator-section">
+        <p class="section-label">Project Calculator</p>
+        <h2>Get your estimated quote with discounts.</h2>
+        <p>Describe your project briefly, select complexity, and see your discounted price. Final quote via email after form submission.</p>
+        <div class="calculator-container">
+          <form class="calculator-form" id="projectCalculator">
+            <label>
+              Project Description
+              <textarea id="projectDesc" placeholder="Briefly describe your project (e.g., e-commerce platform, SaaS dashboard)" rows="3" required></textarea>
+            </label>
+            <label>
+              Complexity Level
+              <select id="complexity" required>
+                <option value="">Select complexity</option>
+                <option value="low">Low - Simple features, standard UI</option>
+                <option value="medium">Medium - Moderate complexity, custom integrations</option>
+                <option value="high">High - Advanced features, complex architecture</option>
+              </select>
+            </label>
+            <button type="button" class="button" id="calculateBtn">Calculate Quote</button>
+          </form>
+          <div class="quote-result" id="quoteResult" style="display: none;">
+            <h3>Estimated Quote</h3>
+            <p id="basePrice"></p>
+            <p id="discountedPrice"></p>
+            <p id="discountNote">Final quote will be communicated via email after filling the contact form.</p>
+            <a href="#contact" class="button">Submit Inquiry</a>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="section contact-section">
         <div>
           <p class="section-label">Ready to start?</p>
@@ -216,33 +285,9 @@
           </p>
         </div>
 
-        <form class="lead-form" action="mailto:kotla.sreekant@gmail.com" method="post" enctype="text/plain">
-          <label>
-            Your name
-            <input type="text" name="Name" placeholder="Ashwin" required />
-          </label>
-          <label>
-            Email address
-            <input type="email" name="Email" placeholder="you@example.com" required />
-          </label>
-          <label>
-            Company or idea
-            <input type="text" name="Company" placeholder="Startup idea, SaaS, marketplace..." required />
-          </label>
-          <label>
-            Website or LinkedIn
-            <input type="url" name="Website" placeholder="https://..." />
-          </label>
-          <label>
-            Target timeline
-            <input type="text" name="Timeline" placeholder="Launch in 6 weeks" />
-          </label>
-          <label>
-            What do you need?
-            <textarea name="Message" placeholder="Describe the product, users, and outcomes you want" rows="5" required></textarea>
-          </label>
-          <button class="button" type="submit">Send inquiry</button>
-        </form>
+        <div class="google-form-container">
+          <iframe src="https://forms.gle/Uyhy72VgtqQuyDFZ9?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
       </section>
     </main>
 
@@ -253,5 +298,6 @@
       </div>
     </footer>
 
+    <script src="script.js"></script>
   </body>
 </html>
