@@ -3,7 +3,16 @@
   <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Your Cloud — Solo AI Product Studio</title>
+<title>Solo AI Product Studio | SaaS & MVP Builds — Sreekanth</title>
+<meta name="description" content="Solo AI product studio that builds SaaS MVPs and web apps with AI-powered speed for startups and founders. Book a free planning call now." />
+<meta property="og:title" content="Solo AI Product Studio | SaaS & MVP Builds — Sreekanth" />
+<meta property="og:description" content="Solo AI product studio that builds SaaS MVPs and web apps with AI-powered speed for startups and founders. Book a free planning call now." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bhoomdom.com/" />
+<meta property="og:image" content="https://bhoomdom.com/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Solo AI Product Studio | SaaS & MVP Builds — Sreekanth" />
+<meta name="twitter:description" content="Solo AI product studio that builds SaaS MVPs and web apps with AI-powered speed for startups and founders. Book a free planning call now." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
@@ -14,6 +23,24 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-LTBGKCV7ZK');
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Solo AI Product Studio",
+    "url": "https://bhoomdom.com/",
+    "description": "Solo AI product studio building SaaS MVPs, web apps, and managed product operations for startups and founders.",
+    "areaServed": "Worldwide",
+    "email": "hello@bhoomdom.com",
+    "sameAs": [
+      "https://linkedin.com"
+    ],
+    "brand": {
+      "@type": "Brand",
+      "name": "Your Cloud"
+    }
+  }
 </script>
 <style>
 :root {
@@ -64,7 +91,33 @@ nav ul li a:hover { color: var(--accent); }
   transition: background 0.2s !important;
 }
 .nav-cta:hover { background: var(--accent) !important; }
-
+.mobile-cta {
+  display: none;
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 120;
+  background: var(--ink);
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.16);
+}
+.contact-actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 24px 0 16px;
+}
+.google-form-container {
+  max-width: 920px;
+  margin: 0 auto;
+}
 /* ── HERO ── */
 .hero {
   min-height: 92vh;
@@ -348,6 +401,39 @@ h2 em { color: var(--accent); font-style: italic; }
 .test-name { font-size: 13px; font-weight: 600; color: var(--ink); }
 .test-role { font-size: 11px; color: var(--muted); }
 
+.case-study-grid,
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+.case-study-card,
+.resource-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.case-study-card:hover,
+.resource-card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
+.case-study-card h3,
+.resource-card h3 { font-size: 18px; margin-bottom: 14px; }
+.case-study-card p,
+.resource-card p { color: var(--ink2); line-height: 1.75; margin-bottom: 16px; }
+.resource-card a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.resource-card a:hover { text-decoration: underline; }
+.case-study-pill {
+  display: inline-flex;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
 /* ── GUARANTEES ── */
 .guarantees { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
 .guarantee {
@@ -427,8 +513,11 @@ textarea { resize: vertical; min-height: 80px; }
 .cta-section .section-label { color: rgba(255,255,255,0.35); }
 .cta-section h2 { color: #fff; margin-bottom: 14px; max-width: 520px; margin-left: auto; margin-right: auto; }
 .cta-section > p { color: rgba(255,255,255,0.5); font-size: 15px; margin-bottom: 40px; }
-.contact-form { max-width: 480px; margin: 0 auto; }
-.form-row { margin-bottom: 12px; }
+.cta-section label { color: #ffffff; }
+.cta-section .btn-secondary { color: #ffffff; border-color: rgba(255,255,255,0.18); }
+.cta-section .btn-secondary:hover { border-color: rgba(255,255,255,0.35); }
+.cta-section .contact-form { max-width: 480px; margin: 0 auto; }
+.cta-section .form-row { margin-bottom: 12px; }
 .contact-form input, .contact-form textarea {
   background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
   color: #fff;
@@ -475,6 +564,8 @@ footer p { font-size: 12px; color: var(--muted); }
   .pricing-card.featured { transform: none; }
   footer { flex-direction: column; gap: 14px; padding: 24px 20px; text-align: center; }
   .cta-section { padding: 64px 20px; }
+  .mobile-cta { display: inline-flex; }
+  .contact-actions { justify-content: center; }
 }
 </style>
 </head>
@@ -483,22 +574,24 @@ footer p { font-size: 12px; color: var(--muted); }
 <nav>
   <a href="#" class="logo">Your<span>Cloud</span></a>
   <ul>
+    <li><a href="#hero">Home</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#why">Why It Works</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#contact" class="nav-cta">Book a call →</a></li>
+    <li><a href="#contact" class="nav-cta">Book a free call →</a></li>
   </ul>
 </nav>
+<a href="#contact" class="mobile-cta">Book a free call</a>
 
 <!-- HERO -->
-<section class="hero">
+<section id="hero" class="hero">
   <div>
     <div class="hero-eyebrow">Solo AI Product Studio</div>
     <h1>Build software <em>products</em> without hiring a team.</h1>
     <p>I'm a tech engineer who uses AI-driven tooling to launch MVPs, SaaS platforms, and full-stack software — faster, cleaner, and globally.</p>
     <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Book a call →</a>
+      <a href="#contact" class="btn-primary">Book a free call →</a>
       <a href="#pricing" class="btn-secondary">See pricing</a>
     </div>
     <div class="hero-stats">
@@ -507,16 +600,12 @@ footer p { font-size: 12px; color: var(--muted); }
         <div class="stat-label">Product launches delivered</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">14<span>+</span></div>
-        <div class="stat-label">SaaS builds, globally</div>
-      </div>
-      <div class="stat-card">
         <div class="stat-num">95<span>%</span></div>
         <div class="stat-label">Client satisfaction rate</div>
       </div>
       <div class="stat-card">
         <div class="stat-num">13<span>+</span></div>
-        <div class="stat-label">Active retainer clients</div>
+        <div class="stat-label">Ongoing retainer clients</div>
       </div>
     </div>
   </div>
@@ -737,28 +826,28 @@ footer p { font-size: 12px; color: var(--muted); }
       <p>"Turned our idea into a product we could launch in 6 weeks. Communication was sharp, delivery faster than any agency we've worked with."</p>
       <div class="test-author">
         <div class="test-avatar" style="background:#0047ff;">N</div>
-        <div><div class="test-name">Neha</div><div class="test-role">Founder</div></div>
+        <div><div class="test-name">Neha</div><div class="test-role">Founder, SaaS startup</div></div>
       </div>
     </div>
     <div class="testimonial reveal" style="transition-delay:.1s">
       <p>"Highly skilled engineer with the right execution mindset. Delivered a SaaS MVP on time, with clear documentation and managed deployment."</p>
       <div class="test-author">
         <div class="test-avatar" style="background:#00c98d;">C</div>
-        <div><div class="test-name">Carlos</div><div class="test-role">Product Lead</div></div>
+        <div><div class="test-name">Carlos</div><div class="test-role">Product Lead, fintech</div></div>
       </div>
     </div>
     <div class="testimonial reveal" style="transition-delay:.2s">
       <p>"Great clarity on what could be built fast versus iterated later. The result was a polished app and a clean handoff for growth."</p>
       <div class="test-author">
         <div class="test-avatar" style="background:#ff6b35;">P</div>
-        <div><div class="test-name">Priya</div><div class="test-role">Startup CEO</div></div>
+        <div><div class="test-name">Priya</div><div class="test-role">Founder, marketplace</div></div>
       </div>
     </div>
     <div class="testimonial reveal" style="transition-delay:.1s">
       <p>"The AI-accelerated approach saved us time and money. Our marketplace went live ahead of schedule with features we didn't think possible."</p>
       <div class="test-author">
         <div class="test-avatar" style="background:#9b5de5;">A</div>
-        <div><div class="test-name">Alex</div><div class="test-role">CTO</div></div>
+        <div><div class="test-name">Alex</div><div class="test-role">CTO, growth product</div></div>
       </div>
     </div>
     <div class="testimonial reveal" style="transition-delay:.2s">
@@ -772,6 +861,28 @@ footer p { font-size: 12px; color: var(--muted); }
       <div style="font-family:'DM Serif Display',serif;font-size:32px;color:rgba(255,255,255,0.15);">★★★★★</div>
       <div style="font-size:36px;font-family:'DM Serif Display',serif;color:#fff;margin:8px 0;line-height:1;">95%</div>
       <div style="font-size:13px;color:rgba(255,255,255,0.45);">Client satisfaction across all engagements</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--white);">
+  <div class="section-label reveal">Case study</div>
+  <h2 class="reveal">A fast SaaS launch with clear product outcomes.</h2>
+  <div class="case-study-grid">
+    <div class="case-study-card reveal">
+      <div class="case-study-pill">Problem</div>
+      <h3>Founder needed an MVP without hiring a team</h3>
+      <p>Early-stage founders were stuck between expensive agencies and solo development risk. They needed one engineer who could own planning, build, and deployment.</p>
+    </div>
+    <div class="case-study-card reveal" style="transition-delay:.1s">
+      <div class="case-study-pill">Solution</div>
+      <h3>Delivered a polished SaaS build in 6 weeks</h3>
+      <p>Built a launch-ready platform with key user flows, payment integration, and production-ready hosting. The workflow combined AI-assisted planning with focused execution.</p>
+    </div>
+    <div class="case-study-card reveal" style="transition-delay:.2s">
+      <div class="case-study-pill">Outcome</div>
+      <h3>Launched ahead of schedule with a clear roadmap</h3>
+      <p>The product launched quickly with a simplified MVP scope, strong delivery confidence, and a growth-ready foundation for faster follow-up releases.</p>
     </div>
   </div>
 </section>
@@ -848,6 +959,26 @@ footer p { font-size: 12px; color: var(--muted); }
   </div>
 </section>
 
+<!-- RESOURCES -->
+<section id="resources" style="background:var(--bg);">
+  <div class="section-label reveal">Resources</div>
+  <h2 class="reveal">Content ideas for founders building SaaS with one engineer.</h2>
+  <div class="resources-grid">
+    <article class="resource-card reveal">
+      <h3>How to build an MVP without a team</h3>
+      <p>Practical guidance on launching a product fast, without a full agency or in-house engineering team.</p>
+    </article>
+    <article class="resource-card reveal" style="transition-delay:.1s">
+      <h3>AI-accelerated SaaS development</h3>
+      <p>How AI tooling can speed planning, design, and development while keeping delivery quality high.</p>
+    </article>
+    <article class="resource-card reveal" style="transition-delay:.2s">
+      <h3>Hire a solo product engineer</h3>
+      <p>Why founders should consider a trusted solo studio to ship their first MVP and retain control over the product.</p>
+    </article>
+  </div>
+</section>
+
 <!-- CALCULATOR -->
 <section class="calc-section">
   <div class="section-label reveal">Project Calculator</div>
@@ -878,10 +1009,30 @@ footer p { font-size: 12px; color: var(--muted); }
 <!-- CONTACT -->
 <section class="cta-section" id="contact">
   <div class="section-label">Ready to start?</div>
-  <h2>Get a quick product plan<br>in one message.</h2>
+  <h2>Book a quick planning call or send a note.</h2>
   <p>Tell me your idea, timeline, and desired outcome. I'll reply with a realistic delivery plan and pricing range.</p>
-  <div class="google-form-container">
-    <iframe src="https://forms.gle/Uyhy72VgtqQuyDFZ9?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  <div class="contact-actions reveal">
+    <a href="https://calendly.com/your-schedule/15min" class="btn-primary" target="_blank" rel="noreferrer">Book a free call</a>
+    <a href="#contact-form" class="btn-secondary">Send a quick note</a>
+  </div>
+  <p style="color: rgba(255,255,255,0.65); max-width: 720px; margin: 0 auto 24px;">Use the call scheduler for the fastest booking, or complete the form below if you'd like a written response.</p>
+  <div class="google-form-container" id="contact-form">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+      <input type="hidden" name="access_key" value="b41cdeb8-fc8c-4672-96a1-3a43ed1f71f2">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
   </div>
 </section>
 
