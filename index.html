@@ -1,1095 +1,551 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Solo AI Product Studio | SaaS & MVP Builds — Sreekanth</title>
-<meta name="description" content="Solo AI product studio that builds SaaS MVPs and web apps with AI-powered speed for startups and founders. Book a free planning call now." />
-<meta property="og:title" content="Solo AI Product Studio | SaaS & MVP Builds — Sreekanth" />
-<meta property="og:description" content="Solo AI product studio that builds SaaS MVPs and web apps with AI-powered speed for startups and founders. Book a free planning call now." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://bhoomdom.com/" />
-<meta property="og:image" content="https://bhoomdom.com/og-image.png" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Solo AI Product Studio | SaaS & MVP Builds — Sreekanth" />
-<meta name="twitter:description" content="Solo AI product studio that builds SaaS MVPs and web apps with AI-powered speed for startups and founders. Book a free planning call now." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LTBGKCV7ZK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-LTBGKCV7ZK');
-</script>
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Solo AI Product Studio",
-    "url": "https://bhoomdom.com/",
-    "description": "Solo AI product studio building SaaS MVPs, web apps, and managed product operations for startups and founders.",
-    "areaServed": "Worldwide",
-    "email": "hello@bhoomdom.com",
-    "sameAs": [
-      "https://linkedin.com"
-    ],
-    "brand": {
-      "@type": "Brand",
-      "name": "Your Cloud"
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BhoomDom | Solo AI Product Studio — SaaS & MVP Builds for Startups</title>
+  <meta name="description" content="Build your SaaS, MVP, or marketplace without hiring a team. BhoomDom is a solo AI product studio delivering agency-quality software — faster and leaner." />
+  <meta name="keywords" content="solo product studio, MVP development, SaaS build, AI-accelerated development, startup engineer, no-team product delivery, marketplace build" />
+  <meta name="author" content="BhoomDom" />
+  <meta property="og:title" content="BhoomDom | Solo AI Product Studio" />
+  <meta property="og:description" content="Build software products from idea to production without hiring a team." />
+  <meta property="og:url" content="https://bhoomdom.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://bhoomdom.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BhoomDom | Solo AI Product Studio" />
+  <meta name="twitter:description" content="Build software products from idea to production without hiring a team." />
+  <link rel="canonical" href="https://bhoomdom.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LTBGKCV7ZK"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-LTBGKCV7ZK');</script>
+
+  <style>
+    :root {
+      --bg: #f5f3ee; --surface: #ffffff; --surface2: #f8f6f0; --border: rgba(0,0,0,0.1);
+      --text: #0d0d0d; --muted: #7a7a7a; --accent: #0047FF; --accent-dim: rgba(0,71,255,0.08);
+      --accent-dark: #0033cc; --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif; --radius: 10px;
     }
-  }
-</script>
-<style>
-:root {
-  --ink: #0d0d0d;
-  --ink2: #3a3a3a;
-  --muted: #7a7a7a;
-  --accent: #0047FF;
-  --accent2: #00c98d;
-  --bg: #f5f3ee;
-  --white: #ffffff;
-  --border: rgba(0,0,0,0.1);
-}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-html { scroll-behavior: smooth; }
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 200; background: var(--nav-bg); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; height: 58px; }
+    .nav-logo { font-family: var(--serif); font-size: 1.15rem; letter-spacing: 0.01em; color: var(--text); }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; font-size: 0.84rem; color: var(--muted); }
+    .nav-links a:hover { color: var(--text); transition: color .2s; }
+    .nav-actions { display: flex; gap: 1rem; align-items: center; }
+    .theme-btn { background: transparent; border: 1px solid var(--border); color: var(--muted); padding: 0.42rem 1rem; border-radius: 6px; font-size: 0.82rem; cursor: pointer; transition: all .2s; }
+    .theme-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .nav-cta { background: var(--accent); color: #ffffff; font-weight: 600; font-size: 0.82rem; padding: 0.42rem 1.1rem; border-radius: 6px; white-space: nowrap; transition: background .2s; }
+    .nav-cta:hover { background: var(--accent-dark); }
 
-body {
-  font-family: 'Sora', sans-serif;
-  background: var(--bg);
-  color: var(--ink);
-  overflow-x: hidden;
-}
+    /* HERO */
+    .hero { min-height: 90vh; display: flex; flex-direction: column; justify-content: center; padding: 7rem 2rem 4rem; max-width: 960px; margin: 0 auto; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.73rem; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent); border: 1px solid rgba(200,240,74,.35); border-radius: 100px; padding: 0.28rem 0.85rem; margin-bottom: 2rem; }
+    .hero-badge::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+    h1 { font-family: var(--serif); font-size: clamp(2.4rem, 5.5vw, 4rem); line-height: 1.1; font-weight: 400; margin-bottom: 1.5rem; max-width: 820px; }
+    h1 em { font-style: italic; color: var(--accent); }
+    .hero-sub { font-size: 1.05rem; color: var(--muted); max-width: 520px; margin-bottom: 2.5rem; line-height: 1.75; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .btn { display: inline-block; font-family: var(--sans); font-size: 0.93rem; font-weight: 600; padding: 0.78rem 1.7rem; border-radius: 8px; cursor: pointer; transition: all .2s; border: none; }
+    .btn-primary { background: var(--accent); color: #ffffff; }
+    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+    .btn-ghost { background: transparent; border: 1px solid var(--border); color: var(--muted); }
+    .btn-ghost:hover { border-color: var(--muted); color: var(--text); }
 
-/* ── NAV ── */
-nav {
-  position: sticky; top: 0; z-index: 100;
-  background: rgba(245,243,238,0.92);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border);
-  padding: 14px 48px;
-  display: flex; justify-content: space-between; align-items: center;
-}
-.logo {
-  font-family: 'DM Serif Display', serif;
-  font-size: 20px; letter-spacing: -0.5px; color: var(--ink);
-  text-decoration: none;
-}
-.logo span { color: var(--accent); font-style: italic; }
-nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
-nav ul li a {
-  font-size: 13px; font-weight: 400; color: var(--ink2);
-  text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s;
-}
-nav ul li a:hover { color: var(--accent); }
-.nav-cta {
-  background: var(--ink) !important; color: #fff !important;
-  padding: 9px 20px; border-radius: 100px;
-  font-size: 13px !important; font-weight: 600 !important;
-  transition: background 0.2s !important;
-}
-.nav-cta:hover { background: var(--accent) !important; }
-.mobile-cta {
-  display: none;
-  position: fixed;
-  bottom: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 120;
-  background: var(--ink);
-  color: #fff;
-  padding: 14px 24px;
-  border-radius: 999px;
-  font-size: 14px;
-  text-decoration: none;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.16);
-}
-.contact-actions {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin: 24px 0 16px;
-}
-.google-form-container {
-  max-width: 920px;
-  margin: 0 auto;
-}
-/* ── HERO ── */
-.hero {
-  min-height: 92vh;
-  display: grid; grid-template-columns: 1fr 1fr;
-  align-items: center; padding: 80px 48px 60px; gap: 60px;
-  position: relative; overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute; top: -140px; right: -140px;
-  width: 560px; height: 560px;
-  background: radial-gradient(circle, rgba(0,71,255,0.11) 0%, transparent 70%);
-  border-radius: 50%; pointer-events: none;
-}
-.hero-eyebrow {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(0,71,255,0.08); color: var(--accent);
-  border: 1px solid rgba(0,71,255,0.2);
-  padding: 5px 14px; border-radius: 100px;
-  font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
-  text-transform: uppercase; margin-bottom: 24px;
-}
-.hero-eyebrow::before { content: '●'; font-size: 8px; animation: blink 2s infinite; }
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.25} }
+    /* STATS */
+    .stats { display: grid; grid-template-columns: repeat(4,1fr); border: 1px solid var(--border); border-radius: 12px; margin: 0 auto 5rem; max-width: 960px; overflow: hidden; }
+    .stat { padding: 1.6rem; border-right: 1px solid var(--border); text-align: center; }
+    .stat:last-child { border-right: none; }
+    .stat-num { font-family: var(--serif); font-size: 2.1rem; color: var(--accent); display: block; }
+    .stat-label { font-size: 0.78rem; color: var(--muted); margin-top: .2rem; }
 
-h1 {
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(38px, 5vw, 60px);
-  line-height: 1.1; letter-spacing: -1.5px; color: var(--ink); margin-bottom: 20px;
-}
-h1 em { color: var(--accent); font-style: italic; }
-.hero p {
-  font-size: 16px; line-height: 1.7; color: var(--ink2);
-  max-width: 420px; margin-bottom: 36px;
-}
-.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-.btn-primary {
-  background: var(--ink); color: #fff;
-  padding: 14px 28px; border-radius: 100px;
-  font-size: 14px; font-weight: 600; text-decoration: none; font-family: 'Sora', sans-serif;
-  transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px;
-  cursor: pointer; border: none;
-}
-.btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
-.btn-secondary {
-  background: transparent; color: var(--ink);
-  padding: 14px 28px; border-radius: 100px;
-  font-size: 14px; font-weight: 600; text-decoration: none; font-family: 'Sora', sans-serif;
-  border: 1.5px solid var(--border); transition: all 0.2s;
-  display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
-}
-.btn-secondary:hover { border-color: var(--ink); }
+    /* SECTION BASE */
+    section { padding: 5rem 2rem; }
+    .inner { max-width: 960px; margin: 0 auto; }
+    .section-label { font-size: 0.71rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: .6rem; font-weight: 500; }
+    h2 { font-family: var(--serif); font-size: clamp(1.75rem, 3.2vw, 2.5rem); font-weight: 400; margin-bottom: 2.25rem; line-height: 1.2; }
 
-.hero-stats {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px;
-}
-.stat-card {
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: 16px; padding: 20px 22px;
-  transition: transform 0.25s, box-shadow 0.25s;
-}
-.stat-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
-.stat-num {
-  font-family: 'DM Serif Display', serif;
-  font-size: 36px; color: var(--ink); margin-bottom: 4px;
-}
-.stat-num span { color: var(--accent); }
-.stat-label { font-size: 12px; color: var(--muted); }
+    /* SERVICES */
+    .services-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .service-card { background: var(--surface); padding: 2rem; transition: background .2s; }
+    .service-card:hover { background: var(--surface2); }
+    .service-num { font-size: .7rem; color: var(--accent); font-weight: 600; margin-bottom: .6rem; letter-spacing: .08em; }
+    .service-card h3 { font-family: var(--serif); font-size: 1.12rem; font-weight: 400; margin-bottom: .4rem; }
+    .service-card p { font-size: .87rem; color: var(--muted); }
 
-.hero-visual { position: relative; display: flex; justify-content: center; align-items: center; }
-.hero-card-mockup {
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: 24px; padding: 28px; width: 100%; max-width: 380px;
-  box-shadow: 0 24px 80px rgba(0,0,0,0.1);
-}
-.mockup-bar { display: flex; align-items: center; gap: 6px; margin-bottom: 20px; }
-.dot { width: 10px; height: 10px; border-radius: 50%; }
-.dot.r { background:#ff5f57; } .dot.y { background:#ffbd2e; } .dot.g { background:#28c840; }
-.timeline-item {
-  display: flex; gap: 14px; align-items: center;
-  padding: 12px 0; border-bottom: 1px solid var(--border);
-  animation: fadeSlide 0.5s ease both;
-}
-.timeline-item:last-child { border-bottom: none; }
-@keyframes fadeSlide { from{opacity:0;transform:translateX(-8px)} to{opacity:1;transform:none} }
-.t-icon {
-  width: 36px; height: 36px; border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 16px; flex-shrink: 0;
-}
-.t-icon.blue  { background: rgba(0,71,255,0.1); }
-.t-icon.green { background: rgba(0,201,141,0.1); }
-.t-icon.amber { background: rgba(255,170,0,0.1); }
-.t-title { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
-.t-sub   { font-size: 11px; color: var(--muted); }
-.t-badge {
-  margin-left: auto; font-size: 10px; font-weight: 600;
-  padding: 3px 9px; border-radius: 100px; flex-shrink: 0;
-}
-.t-badge.done { background: rgba(0,201,141,0.1); color: #00a472; }
-.t-badge.live { background: rgba(0,71,255,0.1); color: var(--accent); }
-.t-badge.wip  { background: rgba(255,170,0,0.1); color: #cc8800; }
+    /* CASE STUDIES */
+    .case-studies { display: flex; flex-direction: column; gap: 1.5rem; }
+    .cs-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 2.25rem; position: relative; overflow: hidden; }
+    .cs-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); }
+    .cs-tag { font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--accent); margin-bottom: .75rem; }
+    .cs-card h3 { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; margin-bottom: .65rem; }
+    .cs-card > p { font-size: .88rem; color: var(--muted); margin-bottom: 1.25rem; line-height: 1.75; }
+    .cs-cols { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-bottom: 1.25rem; }
+    .cs-col label { font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); display: block; margin-bottom: .3rem; }
+    .cs-col p { font-size: .86rem; line-height: 1.6; }
+    .cs-result { padding: .85rem 1.1rem; background: var(--accent-dim); border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; font-size: .86rem; }
+    .cs-result strong { color: var(--accent); }
+    .cs-meta { display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; }
+    .cs-pill { font-size: .72rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 100px; padding: .2rem .75rem; color: var(--muted); }
 
-/* ── SECTION SHARED ── */
-section { padding: 88px 48px; }
-.section-label {
-  font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--muted); margin-bottom: 12px;
-}
-h2 {
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(28px, 4vw, 44px);
-  line-height: 1.15; letter-spacing: -1px; color: var(--ink); margin-bottom: 48px;
-}
-h2 em { color: var(--accent); font-style: italic; }
+    /* WHY */
+    .why-list { list-style: none; display: flex; flex-direction: column; gap: .85rem; }
+    .why-list li { display: flex; gap: 1rem; align-items: flex-start; padding: 1.2rem 1.4rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; font-size: .93rem; }
+    .why-check { color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: .05rem; }
+    .quote-block { margin-top: 2rem; padding: 1.5rem 2rem; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; }
+    .quote-block p { font-family: var(--serif); font-size: 1.12rem; font-style: italic; }
+    .quote-block cite { display: block; margin-top: .6rem; font-size: .8rem; color: var(--muted); font-style: normal; }
 
-/* ── SERVICES ── */
-.services-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
-.service-card {
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: 20px; padding: 28px 30px;
-  position: relative; overflow: hidden; transition: all 0.25s; cursor: default;
-}
-.service-card::after {
-  content: ''; position: absolute; inset: 0;
-  background: var(--accent); opacity: 0; transition: opacity 0.3s;
-}
-.service-card:hover::after { opacity: 0.04; }
-.service-card:hover { border-color: rgba(0,71,255,0.3); transform: translateY(-2px); box-shadow: 0 16px 48px rgba(0,0,0,0.08); }
-.service-icon { font-size: 28px; margin-bottom: 16px; display: block; }
-.service-card h3 { font-size: 17px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
-.service-card p { font-size: 13px; color: var(--muted); line-height: 1.65; }
-.service-num {
-  position: absolute; top: 16px; right: 22px;
-  font-family: 'DM Serif Display', serif;
-  font-size: 52px; color: rgba(0,0,0,0.04); font-style: italic; line-height: 1;
-}
+    /* TRUST */
+    .trust-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; }
+    .trust-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem; }
+    .trust-card h4 { font-size: .9rem; font-weight: 600; margin-bottom: .45rem; }
+    .trust-card p { font-size: .81rem; color: var(--muted); line-height: 1.65; }
 
-/* ── CAPABILITIES (replaces Tools) ── */
-.capabilities-section {
-  background: var(--ink); padding: 88px 48px; overflow: hidden;
-}
-.capabilities-section .section-label { color: rgba(255,255,255,0.35); }
-.capabilities-section h2 { color: #fff; margin-bottom: 56px; }
+    /* PRICING */
+    .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+    .pricing-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; transition: border-color .2s; }
+    .pricing-card:hover { border-color: var(--accent); }
+    .pricing-card.featured { border-color: var(--accent); }
+    .pricing-feat-badge { font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: #0b0b0b; background: var(--accent); border-radius: 4px; padding: .15rem .5rem; margin-bottom: .6rem; display: inline-block; }
+    .pricing-card h3 { font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: .6rem; font-weight: 500; }
+    .price { font-family: var(--serif); font-size: 1.8rem; color: var(--accent); margin-bottom: .6rem; }
+    .pricing-card p { font-size: .84rem; color: var(--muted); }
 
-.cap-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    /* CALCULATOR */
+    .calculator { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 2.25rem; }
+    .calc-fields { display: flex; flex-direction: column; gap: 1.1rem; }
+    .calc-fields textarea, .calc-fields select { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: var(--sans); font-size: .91rem; padding: .82rem 1rem; outline: none; transition: border-color .2s; }
+    .calc-fields textarea:focus, .calc-fields select:focus { border-color: var(--accent); }
+    .calc-fields select option { background: var(--option-bg); }
+    .calc-fields textarea { min-height: 90px; resize: vertical; }
+    .calc-result { margin-top: 1.5rem; padding: 1.5rem; background: var(--accent-dim); border: 1px solid var(--accent); border-radius: var(--radius); display: none; }
+    .calc-result.visible { display: block; }
+    .calc-price { font-family: var(--serif); font-size: 2rem; color: var(--accent); margin-bottom: .4rem; }
+    .calc-result p { font-size: .84rem; color: var(--muted); }
 
-.cap-card {
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 20px; padding: 32px 28px;
-  position: relative; overflow: hidden;
-  transition: border-color 0.3s, transform 0.3s;
-}
-.cap-card:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-3px); }
+    /* BLOG */
+    .blog-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+    .blog-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.6rem; cursor: pointer; transition: border-color .2s; }
+    .blog-card:hover { border-color: var(--accent); }
+    .blog-tag { font-size: .69rem; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); font-weight: 600; margin-bottom: .5rem; }
+    .blog-card h4 { font-family: var(--serif); font-size: 1rem; font-weight: 400; line-height: 1.4; margin-bottom: .5rem; }
+    .blog-card p { font-size: .8rem; color: var(--muted); line-height: 1.65; }
+    .blog-read { font-size: .78rem; color: var(--accent); margin-top: .85rem; }
 
-/* animated gradient shimmer on hover */
-.cap-card::before {
-  content: '';
-  position: absolute; inset: 0; opacity: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(0,71,255,0.18) 0%, transparent 70%);
-  transition: opacity 0.4s;
-}
-.cap-card:hover::before { opacity: 1; }
+    /* Blog modal */
+    .blog-modal { display: none; position: fixed; inset: 0; z-index: 500; background: rgba(0,0,0,.8); backdrop-filter: blur(8px); padding: 2rem 1rem; overflow-y: auto; }
+    .blog-modal.open { display: flex; align-items: flex-start; justify-content: center; }
+    .blog-modal-inner { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; max-width: 720px; width: 100%; padding: 2.5rem; position: relative; margin: auto; }
+    .blog-close { position: absolute; top: 1.25rem; right: 1.25rem; background: var(--surface2); border: 1px solid var(--border); color: var(--muted); border-radius: 6px; padding: .3rem .8rem; font-size: .8rem; cursor: pointer; }
+    .blog-modal-tag { font-size: .7rem; text-transform: uppercase; letter-spacing: .12em; color: var(--accent); font-weight: 600; margin-bottom: .75rem; }
+    .blog-modal-inner h2 { font-family: var(--serif); font-size: 1.75rem; font-weight: 400; margin-bottom: .5rem; line-height: 1.25; }
+    .blog-meta { font-size: .78rem; color: var(--muted); margin-bottom: 1.75rem; }
+    .blog-body h3 { font-family: var(--serif); font-size: 1.12rem; font-weight: 400; margin: 1.5rem 0 .5rem; }
+    .blog-body p { font-size: .9rem; color: var(--muted); line-height: 1.8; margin-bottom: .85rem; }
+    .blog-body ul { margin: .5rem 0 .85rem 1.25rem; }
+    .blog-body ul li { font-size: .88rem; color: var(--muted); line-height: 1.75; }
+    .blog-body strong { color: var(--text); }
 
-.cap-icon-row {
-  display: flex; align-items: center; gap: 14px; margin-bottom: 18px;
-}
-.cap-icon {
-  width: 48px; height: 48px; border-radius: 14px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 22px; flex-shrink: 0;
-}
-.cap-icon.c1 { background: rgba(0,71,255,0.18); }
-.cap-icon.c2 { background: rgba(0,201,141,0.18); }
-.cap-icon.c3 { background: rgba(255,170,0,0.18); }
-.cap-icon.c4 { background: rgba(255,107,53,0.18); }
+    /* CONTACT */
+    .contact-box { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 3rem; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: start; }
+    .contact-info h2 { margin-bottom: .85rem; }
+    .contact-info p { color: var(--muted); font-size: .9rem; line-height: 1.8; margin-bottom: 1.5rem; }
+    .contact-meta { display: flex; flex-direction: column; gap: .65rem; }
+    .contact-meta-item { display: flex; align-items: center; gap: .7rem; font-size: .83rem; color: var(--muted); }
+    .contact-meta-icon { width: 30px; height: 30px; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: .9rem; flex-shrink: 0; }
+    .form-fields { display: flex; flex-direction: column; gap: .9rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+    .form-fields input, .form-fields select, .form-fields textarea { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: var(--sans); font-size: .9rem; padding: .82rem 1rem; outline: none; transition: border-color .2s; }
+    .form-fields select option { background: var(--option-bg); }
+    .form-fields input::placeholder, .form-fields textarea::placeholder { color: var(--muted); }
+    .form-fields input:focus, .form-fields select:focus, .form-fields textarea:focus { border-color: var(--accent); }
+    .form-fields textarea { min-height: 115px; resize: vertical; }
+    .form-submit { background: var(--accent); color: #ffffff; border: none; font-family: var(--sans); font-weight: 600; font-size: .93rem; padding: .88rem 2rem; border-radius: 8px; cursor: pointer; width: 100%; transition: background .2s, transform .15s; }
+    .form-submit:hover { background: var(--accent-dark); transform: translateY(-1px); }
+    .form-submit:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+    .form-note { font-size: .72rem; color: var(--muted); text-align: center; }
+    .form-success { display: none; text-align: center; padding: 2.5rem 2rem; background: var(--accent-dim); border: 1px solid var(--accent); border-radius: var(--radius); }
+    .form-success.visible { display: block; }
+    .form-success h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; margin-bottom: .5rem; }
+    .form-success p { font-size: .88rem; color: var(--muted); }
 
-.cap-title {
-  font-size: 18px; font-weight: 700; color: #fff; letter-spacing: -0.3px;
-}
-.cap-desc {
-  font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.7; margin-bottom: 24px;
-}
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; font-size: .78rem; color: var(--muted); }
+    footer a { color: var(--accent); }
 
-/* animated progress bar */
-.cap-bar-label {
-  display: flex; justify-content: space-between;
-  font-size: 11px; color: rgba(255,255,255,0.35);
-  margin-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase;
-}
-.cap-bar-track {
-  height: 4px; background: rgba(255,255,255,0.08); border-radius: 100px; overflow: hidden;
-}
-.cap-bar-fill {
-  height: 100%; border-radius: 100px;
-  width: 0; transition: width 1.4s cubic-bezier(0.22,1,0.36,1);
-}
-.cap-bar-fill.b1 { background: linear-gradient(90deg,#0047ff,#66aaff); }
-.cap-bar-fill.b2 { background: linear-gradient(90deg,#00c98d,#5eefc0); }
-.cap-bar-fill.b3 { background: linear-gradient(90deg,#ffaa00,#ffdd66); }
-.cap-bar-fill.b4 { background: linear-gradient(90deg,#ff6b35,#ffaa80); }
-
-/* floating pill tags */
-.cap-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
-.cap-tag {
-  font-size: 11px; font-weight: 500;
-  color: rgba(255,255,255,0.6);
-  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1);
-  padding: 4px 11px; border-radius: 100px;
-  transition: background 0.2s, color 0.2s;
-}
-.cap-card:hover .cap-tag { background: rgba(255,255,255,0.11); color: rgba(255,255,255,0.85); }
-
-/* scrolling ticker at bottom */
-.cap-ticker-wrap {
-  margin-top: 52px; overflow: hidden;
-  border-top: 1px solid rgba(255,255,255,0.08); padding-top: 28px;
-}
-.cap-ticker-label {
-  font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.1em;
-  text-transform: uppercase; margin-bottom: 14px;
-}
-.ticker-track { display: flex; gap: 0; width: max-content; animation: ticker 28s linear infinite; }
-.ticker-track:hover { animation-play-state: paused; }
-@keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-.ticker-item {
-  display: flex; align-items: center; gap: 8px;
-  white-space: nowrap; padding: 0 32px;
-  font-size: 13px; color: rgba(255,255,255,0.4);
-  border-right: 1px solid rgba(255,255,255,0.08);
-}
-.ticker-item span { color: rgba(255,255,255,0.15); font-size: 16px; }
-
-/* ── WHY IT WORKS ── */
-.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-.why-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-.why-list li {
-  display: flex; gap: 14px; align-items: flex-start;
-  padding: 18px; background: var(--white); border-radius: 14px;
-  border: 1px solid var(--border); transition: border-color 0.2s;
-}
-.why-list li:hover { border-color: var(--accent); }
-.why-check {
-  width: 28px; height: 28px; border-radius: 50%;
-  background: rgba(0,201,141,0.12); color: #00a472;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 13px; font-weight: 700; flex-shrink: 0;
-}
-.why-text strong { font-size: 14px; font-weight: 600; color: var(--ink); display: block; margin-bottom: 3px; }
-.why-text span { font-size: 12px; color: var(--muted); }
-.why-quote {
-  background: var(--ink); border-radius: 20px; padding: 40px;
-  position: relative;
-}
-.why-quote::before {
-  content: '"'; font-family: 'DM Serif Display', serif;
-  font-size: 90px; color: rgba(255,255,255,0.08);
-  position: absolute; top: 8px; left: 20px; line-height: 1;
-}
-.why-quote blockquote {
-  font-family: 'DM Serif Display', serif; font-size: 20px;
-  color: #fff; line-height: 1.55; font-style: italic; position: relative; z-index: 1;
-}
-.why-quote cite { display: block; margin-top: 20px; font-size: 12px; color: rgba(255,255,255,0.35); font-style: normal; }
-
-/* ── TESTIMONIALS ── */
-.testimonials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
-.testimonial {
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: 20px; padding: 28px;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.testimonial:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.07); }
-.testimonial p { font-size: 14px; line-height: 1.7; color: var(--ink2); margin-bottom: 20px; font-style: italic; }
-.test-author { display: flex; align-items: center; gap: 10px; }
-.test-avatar {
-  width: 36px; height: 36px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 13px; font-weight: 700; color: #fff;
-}
-.test-name { font-size: 13px; font-weight: 600; color: var(--ink); }
-.test-role { font-size: 11px; color: var(--muted); }
-
-.case-study-grid,
-.resources-grid {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 16px;
-  margin-top: 32px;
-}
-.case-study-card,
-.resource-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 28px;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.case-study-card:hover,
-.resource-card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
-.case-study-card h3,
-.resource-card h3 { font-size: 18px; margin-bottom: 14px; }
-.case-study-card p,
-.resource-card p { color: var(--ink2); line-height: 1.75; margin-bottom: 16px; }
-.resource-card a { color: var(--accent); font-weight: 600; text-decoration: none; }
-.resource-card a:hover { text-decoration: underline; }
-.case-study-pill {
-  display: inline-flex;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--accent);
-  margin-bottom: 12px;
-}
-
-/* ── GUARANTEES ── */
-.guarantees { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
-.guarantee {
-  display: flex; flex-direction: column; gap: 10px;
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: 16px; padding: 22px 20px;
-  transition: transform 0.2s;
-}
-.guarantee:hover { transform: translateY(-2px); }
-.g-icon { font-size: 22px; }
-.g-title { font-size: 14px; font-weight: 600; color: var(--ink); }
-.g-desc { font-size: 12px; color: var(--muted); line-height: 1.55; }
-
-/* ── PRICING ── */
-.pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; align-items: start; }
-.pricing-card {
-  background: var(--white); border: 1.5px solid var(--border);
-  border-radius: 20px; padding: 32px 28px; transition: all 0.25s;
-}
-.pricing-card.featured { background: var(--ink); border-color: var(--ink); transform: scale(1.03); }
-.pricing-card:not(.featured):hover { transform: translateY(-3px); box-shadow: 0 16px 48px rgba(0,0,0,0.08); }
-.pricing-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-.pricing-card.featured .pricing-label { color: rgba(255,255,255,0.45); }
-.pricing-name { font-size: 20px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
-.pricing-card.featured .pricing-name { color: #fff; }
-.pricing-price { font-family: 'DM Serif Display', serif; font-size: 36px; color: var(--ink); margin: 16px 0; }
-.pricing-price sub { font-size: 14px; font-family: 'Sora', sans-serif; font-weight: 400; color: var(--muted); }
-.pricing-card.featured .pricing-price { color: #fff; }
-.pricing-card.featured .pricing-price sub { color: rgba(255,255,255,0.45); }
-.pricing-features { list-style: none; margin-bottom: 28px; }
-.pricing-features li {
-  font-size: 13px; color: var(--ink2); padding: 7px 0;
-  border-bottom: 1px solid var(--border); display: flex; gap: 8px; align-items: center;
-}
-.pricing-card.featured .pricing-features li { color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.1); }
-.pricing-features li::before { content: '✓'; color: var(--accent2); font-weight: 700; }
-.btn-pricing {
-  width: 100%; padding: 13px; border-radius: 100px;
-  font-size: 13px; font-weight: 600; cursor: pointer; border: none;
-  background: var(--bg); color: var(--ink); transition: all 0.2s;
-  font-family: 'Sora', sans-serif;
-}
-.pricing-card.featured .btn-pricing { background: var(--accent); color: #fff; }
-.btn-pricing:hover { opacity: 0.82; }
-
-/* ── CALCULATOR ── */
-.calc-section { background: var(--white); }
-.calc-wrapper {
-  background: var(--bg); border: 1px solid var(--border);
-  border-radius: 24px; padding: 40px; max-width: 640px;
-}
-.calc-row { margin-bottom: 20px; }
-label { font-size: 13px; font-weight: 600; color: var(--ink); display: block; margin-bottom: 8px; }
-select, textarea, input[type="text"], input[type="email"] {
-  width: 100%; padding: 12px 16px;
-  border: 1.5px solid var(--border); border-radius: 12px;
-  font-size: 13px; font-family: 'Sora', sans-serif;
-  color: var(--ink); background: var(--white);
-  outline: none; transition: border-color 0.2s;
-  -webkit-appearance: none;
-}
-select:focus, textarea:focus, input:focus { border-color: var(--accent); }
-textarea { resize: vertical; min-height: 80px; }
-.calc-result {
-  background: var(--ink); color: #fff;
-  border-radius: 16px; padding: 28px; margin-top: 20px;
-  display: none; animation: fadeUp 0.4s ease;
-}
-.calc-result.show { display: block; }
-@keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }
-.calc-result .r-label { font-size: 11px; opacity: 0.4; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
-.calc-result .r-price { font-family: 'DM Serif Display', serif; font-size: 42px; color: #fff; margin-bottom: 6px; }
-.calc-result .r-sub { font-size: 12px; opacity: 0.5; }
-
-/* ── CTA / CONTACT ── */
-.cta-section { background: var(--ink); padding: 100px 48px; text-align: center; }
-.cta-section .section-label { color: rgba(255,255,255,0.35); }
-.cta-section h2 { color: #fff; margin-bottom: 14px; max-width: 520px; margin-left: auto; margin-right: auto; }
-.cta-section > p { color: rgba(255,255,255,0.5); font-size: 15px; margin-bottom: 40px; }
-.cta-section label { color: #ffffff; }
-.cta-section .btn-secondary { color: #ffffff; border-color: rgba(255,255,255,0.18); }
-.cta-section .btn-secondary:hover { border-color: rgba(255,255,255,0.35); }
-.cta-section .contact-form { max-width: 480px; margin: 0 auto; }
-.cta-section .form-row { margin-bottom: 12px; }
-.contact-form input, .contact-form textarea {
-  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
-  color: #fff;
-}
-.contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255,255,255,0.28); }
-.contact-form input:focus, .contact-form textarea:focus { border-color: var(--accent); }
-.contact-form textarea { min-height: 100px; }
-.submit-btn {
-  width: 100%; padding: 15px; border-radius: 100px;
-  background: var(--accent); color: #fff;
-  font-size: 15px; font-weight: 700; border: none; cursor: pointer;
-  font-family: 'Sora', sans-serif; margin-top: 8px;
-  transition: opacity 0.2s; letter-spacing: 0.02em;
-}
-.submit-btn:hover { opacity: 0.82; }
-
-/* ── FOOTER ── */
-footer {
-  background: var(--bg); border-top: 1px solid var(--border);
-  padding: 28px 48px; display: flex;
-  justify-content: space-between; align-items: center;
-}
-footer p { font-size: 12px; color: var(--muted); }
-.footer-links { display: flex; gap: 20px; }
-.footer-links a { font-size: 12px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-.footer-links a:hover { color: var(--ink); }
-
-/* ── SCROLL REVEAL ── */
-.reveal {
-  opacity: 0; transform: translateY(24px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
-}
-.reveal.visible { opacity: 1; transform: none; }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 768px) {
-  nav { padding: 12px 20px; }
-  nav ul { display: none; }
-  .hero { grid-template-columns: 1fr; padding: 40px 20px 60px; min-height: auto; }
-  .hero-visual { display: none; }
-  section { padding: 56px 20px; }
-  .capabilities-section { padding: 56px 20px; }
-  .services-grid, .testimonials-grid, .pricing-grid, .guarantees, .why-grid, .cap-grid { grid-template-columns: 1fr; }
-  .pricing-card.featured { transform: none; }
-  footer { flex-direction: column; gap: 14px; padding: 24px 20px; text-align: center; }
-  .cta-section { padding: 64px 20px; }
-  .mobile-cta { display: inline-flex; }
-  .contact-actions { justify-content: center; }
-}
-</style>
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .stats { grid-template-columns: repeat(2,1fr); }
+      .stat { border-bottom: 1px solid var(--border); }
+      .services-grid, .trust-grid, .pricing-grid, .blog-grid { grid-template-columns: 1fr; }
+      .cs-cols { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-  <body>
-<!-- NAV -->
-<nav>
-  <a href="#" class="logo">Your<span>Cloud</span></a>
-  <ul>
-    <li><a href="#hero">Home</a></li>
+<body>
+
+<nav id="top">
+  <div class="nav-logo">Bhoom<span>Dom</span></div>
+  <ul class="nav-links">
     <li><a href="#services">Services</a></li>
-    <li><a href="#why">Why It Works</a></li>
+    <li><a href="#why-it-works">Why it works</a></li>
+    <li><a href="#case-studies">Case Studies</a></li>
+    <li><a href="#calculator">Calculator</a></li>
     <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#blog">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#contact" class="nav-cta">Book a free call →</a></li>
   </ul>
+  <div class="nav-actions">
+    <button id="theme-toggle" class="theme-btn">🌙 Dark</button>
+    <a href="#contact" class="nav-cta">Book a free call →</a>
+  </div>
 </nav>
-<a href="#contact" class="mobile-cta">Book a free call</a>
 
-<!-- HERO -->
-<section id="hero" class="hero">
-  <div>
-    <div class="hero-eyebrow">Solo AI Product Studio</div>
-    <h1>Build software <em>products</em> without hiring a team.</h1>
-    <p>I'm a tech engineer who uses AI-driven tooling to launch MVPs, SaaS platforms, and full-stack software — faster, cleaner, and globally.</p>
-    <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Book a free call →</a>
-      <a href="#pricing" class="btn-secondary">See pricing</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-card">
-        <div class="stat-num">12<span>+</span></div>
-        <div class="stat-label">Product launches delivered</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">95<span>%</span></div>
-        <div class="stat-label">Client satisfaction rate</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">13<span>+</span></div>
-        <div class="stat-label">Ongoing retainer clients</div>
-      </div>
+<div class="hero">
+  <span class="hero-badge">Solo AI Product Studio · Available for new projects</span>
+  <h1>Build software products from idea to production <em>without hiring a team.</em></h1>
+  <p class="hero-sub">BhoomDom uses AI-driven tooling to launch MVPs, SaaS platforms, marketplaces, and full-stack software — faster, cleaner, and globally. Agency quality. Startup speed.</p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn btn-primary">Book a free call</a>
+    <a href="#pricing" class="btn btn-ghost">See pricing →</a>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat"><span class="stat-num">12</span><div class="stat-label">Product & web apps delivered</div></div>
+  <div class="stat"><span class="stat-num">14</span><div class="stat-label">SaaS builds globally</div></div>
+  <div class="stat"><span class="stat-num">13</span><div class="stat-label">Ongoing retainer clients</div></div>
+  <div class="stat"><span class="stat-num">95%</span><div class="stat-label">Client satisfaction rate</div></div>
+</div>
+
+<section id="services">
+  <div class="inner">
+    <div class="section-label">What we do</div>
+    <h2>Product engineering, launch, and managed growth.</h2>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-num">01</div><h3>Full-stack product build</h3><p>End-to-end execution for startups and marketplaces from architecture to production.</p></div>
+      <div class="service-card"><div class="service-num">02</div><h3>MVP & SaaS delivery</h3><p>Production-ready platforms with validated UX, payments, and full deployment from day one.</p></div>
+      <div class="service-card"><div class="service-num">03</div><h3>Growth operations</h3><p>Ongoing support, optimization, and feature delivery to keep your product improving.</p></div>
+      <div class="service-card"><div class="service-num">04</div><h3>AI-accelerated development</h3><p>Faster execution using AI tooling — the same quality output in a fraction of the time.</p></div>
     </div>
   </div>
-  <div class="hero-visual">
-    <div class="hero-card-mockup">
-      <div class="mockup-bar">
-        <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
-        <span style="font-size:11px;color:var(--muted);margin-left:8px;font-family:'Sora',sans-serif;">Project Timeline</span>
+</section>
+
+<section id="case-studies">
+  <div class="inner">
+    <div class="section-label">Real work</div>
+    <h2>Projects we've shipped.</h2>
+    <div class="case-studies">
+      <div class="cs-card">
+        <div class="cs-tag">Case Study 01 · Two-sided Marketplace · US Client</div>
+        <h3>A service marketplace from zero to 400 users — in 6 weeks.</h3>
+        <p>A founder with an 8-week runway needed a two-sided marketplace with payments, matching, and onboarding. No time for iteration.</p>
+        <div class="cs-cols">
+          <div class="cs-col"><label>Challenge</label><p>Build marketplace from scratch. Tight scope, non-negotiable timeline.</p></div>
+          <div class="cs-col"><label>Timeline</label><p>6 weeks. Launch event scheduled.</p></div>
+          <div class="cs-col"><label>Outcome</label><p>Shipped on schedule. 50 sign-ups in 48h. Now a retainer.</p></div>
+        </div>
+        <div class="cs-result"><strong>Result:</strong> Launched ahead of schedule. First 50 users within 48 hours.</div>
       </div>
-      <div>
-        <div class="timeline-item" style="animation-delay:.1s">
-          <div class="t-icon blue">🗺️</div>
-          <div><div class="t-title">Product Roadmap</div><div class="t-sub">Strategy & validation</div></div>
-          <div class="t-badge done">Done</div>
+
+      <div class="cs-card">
+        <div class="cs-tag">Case Study 02 · B2B SaaS · EU Client</div>
+        <h3>A $3k/mo analytics dashboard replaced with custom SaaS.</h3>
+        <p>A Berlin ops team was bleeding $3k/month on a tool that only covered 60% of their workflow. Agency quoted €80k and 6 months.</p>
+        <div class="cs-cols">
+          <div class="cs-col"><label>Challenge</label><p>Custom analytics dashboard integrating multiple data sources.</p></div>
+          <div class="cs-col"><label>Timeline</label><p>12 weeks before fiscal cycle.</p></div>
+          <div class="cs-col"><label>Outcome</label><p>Delivered in 8 weeks. Full ownership. 3 modules shipped since.</p></div>
         </div>
-        <div class="timeline-item" style="animation-delay:.2s">
-          <div class="t-icon green">⚡</div>
-          <div><div class="t-title">MVP Build</div><div class="t-sub">Full-stack development</div></div>
-          <div class="t-badge live">Live</div>
+        <div class="cs-result"><strong>Result:</strong> $36k/year saved. Complete codebase ownership.</div>
+      </div>
+
+      <div class="cs-card">
+        <div class="cs-tag">Case Study 03 · MVP Validation · India/US</div>
+        <h3>No-code idea → investor-ready MVP → $200k raised.</h3>
+        <p>Non-technical founder had a validated HR automation idea. Needed a working product to pitch to investors in 3 weeks.</p>
+        <div class="cs-cols">
+          <div class="cs-col"><label>Challenge</label><p>Polished, investor-ready MVP in record time.</p></div>
+          <div class="cs-col"><label>Timeline</label><p>3 weeks. Pitch meeting scheduled.</p></div>
+          <div class="cs-col"><label>Outcome</label><p>Shipped in 2.5 weeks. Closed $200k. 12 beta customers.</p></div>
         </div>
-        <div class="timeline-item" style="animation-delay:.3s">
-          <div class="t-icon amber">🚀</div>
-          <div><div class="t-title">SaaS Launch</div><div class="t-sub">Deploy & go-to-market</div></div>
-          <div class="t-badge wip">Week 6</div>
-        </div>
-        <div class="timeline-item" style="animation-delay:.4s">
-          <div class="t-icon blue">📈</div>
-          <div><div class="t-title">Growth Ops</div><div class="t-sub">Ongoing retainer</div></div>
-          <div class="t-badge done">Active</div>
-        </div>
+        <div class="cs-result"><strong>Result:</strong> $200k raised. Now in paid beta with growth trajectory.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" style="background:var(--white);">
-  <div class="section-label reveal">What I do</div>
-  <h2 class="reveal">Product engineering,<br>launch & <em>managed growth</em>.</h2>
-  <div class="services-grid">
-    <div class="service-card reveal">
-      <span class="service-icon">🏗️</span>
-      <div class="service-num">01</div>
-      <h3>Full-stack product build</h3>
-      <p>12 product launches for startups and marketplaces with end-to-end execution. You get a working product, not a prototype.</p>
-    </div>
-    <div class="service-card reveal" style="transition-delay:.1s">
-      <span class="service-icon">⚡</span>
-      <div class="service-num">02</div>
-      <h3>MVP & SaaS delivery</h3>
-      <p>14 MVP and SaaS builds with validated UX, payment flows, and deployment. From idea to revenue-ready in weeks.</p>
-    </div>
-    <div class="service-card reveal" style="transition-delay:.2s">
-      <span class="service-icon">📈</span>
-      <div class="service-num">03</div>
-      <h3>Growth operations</h3>
-      <p>13 ongoing operations, support, and optimization engagements. Your product keeps improving after launch.</p>
-    </div>
-    <div class="service-card reveal" style="transition-delay:.3s">
-      <span class="service-icon">🤖</span>
-      <div class="service-num">04</div>
-      <h3>AI-accelerated development</h3>
-      <p>11 AI-enabled product builds with faster execution and lower cost — replacing the need for large engineering teams.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CAPABILITIES -->
-<section class="capabilities-section">
-  <div class="section-label">How I build</div>
-  <h2>End-to-end capability,<br>without the <em>overhead</em>.</h2>
-
-  <div class="cap-grid">
-
-    <!-- Card 1: Design -->
-    <div class="cap-card">
-      <div class="cap-icon-row">
-        <div class="cap-icon c1">🎨</div>
-        <div class="cap-title">Pixel-perfect design</div>
-      </div>
-      <p class="cap-desc">Every product starts with a clear visual strategy. Interfaces are crafted for real users — intuitive, on-brand, and ready to convert from day one.</p>
-      <div class="cap-bar-label"><span>Design velocity</span><span>90%</span></div>
-      <div class="cap-bar-track"><div class="cap-bar-fill b1" data-width="90"></div></div>
-      <div class="cap-tags">
-        <span class="cap-tag">UX strategy</span>
-        <span class="cap-tag">Rapid prototyping</span>
-        <span class="cap-tag">Brand-aligned UI</span>
-        <span class="cap-tag">AI-assisted design</span>
-      </div>
-    </div>
-
-    <!-- Card 2: Development -->
-    <div class="cap-card">
-      <div class="cap-icon-row">
-        <div class="cap-icon c2">⚙️</div>
-        <div class="cap-title">Production-grade code</div>
-      </div>
-      <p class="cap-desc">Scalable, maintainable full-stack engineering — delivered faster with AI-assisted workflows that don't sacrifice code quality or long-term architecture.</p>
-      <div class="cap-bar-label"><span>Build speed vs. traditional</span><span>3× faster</span></div>
-      <div class="cap-bar-track"><div class="cap-bar-fill b2" data-width="85"></div></div>
-      <div class="cap-tags">
-        <span class="cap-tag">Full-stack engineering</span>
-        <span class="cap-tag">API integrations</span>
-        <span class="cap-tag">Scalable architecture</span>
-        <span class="cap-tag">AI-pair programming</span>
-      </div>
-    </div>
-
-    <!-- Card 3: QA -->
-    <div class="cap-card">
-      <div class="cap-icon-row">
-        <div class="cap-icon c3">🔬</div>
-        <div class="cap-title">Rigorous quality assurance</div>
-      </div>
-      <p class="cap-desc">Bugs caught before users see them. Automated test suites, cross-browser coverage, and continuous monitoring ensure your product stays reliable at scale.</p>
-      <div class="cap-bar-label"><span>Test coverage</span><span>95%</span></div>
-      <div class="cap-bar-track"><div class="cap-bar-fill b3" data-width="95"></div></div>
-      <div class="cap-tags">
-        <span class="cap-tag">Automated testing</span>
-        <span class="cap-tag">Cross-browser QA</span>
-        <span class="cap-tag">Performance monitoring</span>
-        <span class="cap-tag">Regression checks</span>
-      </div>
-    </div>
-
-    <!-- Card 4: Ops -->
-    <div class="cap-card">
-      <div class="cap-icon-row">
-        <div class="cap-icon c4">🚀</div>
-        <div class="cap-title">Seamless deployment & ops</div>
-      </div>
-      <p class="cap-desc">Launch with confidence. CI/CD pipelines, zero-downtime deploys, auto-scaling infrastructure, and 24/7 monitoring keep your product live and growing.</p>
-      <div class="cap-bar-label"><span>Uptime reliability</span><span>99.9%</span></div>
-      <div class="cap-bar-track"><div class="cap-bar-fill b4" data-width="99"></div></div>
-      <div class="cap-tags">
-        <span class="cap-tag">CI/CD pipelines</span>
-        <span class="cap-tag">Auto-scaling infra</span>
-        <span class="cap-tag">Zero-downtime deploys</span>
-        <span class="cap-tag">24/7 monitoring</span>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Ticker -->
-  <div class="cap-ticker-wrap">
-    <div class="cap-ticker-label">Powered by modern tooling</div>
-    <div class="ticker-track" id="ticker">
-      <div class="ticker-item"><span>◆</span> AI-assisted design</div>
-      <div class="ticker-item"><span>◆</span> Rapid prototyping</div>
-      <div class="ticker-item"><span>◆</span> Automated code review</div>
-      <div class="ticker-item"><span>◆</span> AI pair programming</div>
-      <div class="ticker-item"><span>◆</span> Intelligent test generation</div>
-      <div class="ticker-item"><span>◆</span> Continuous monitoring</div>
-      <div class="ticker-item"><span>◆</span> Global CDN delivery</div>
-      <div class="ticker-item"><span>◆</span> Instant deployments</div>
-      <!-- duplicate for seamless loop -->
-      <div class="ticker-item"><span>◆</span> AI-assisted design</div>
-      <div class="ticker-item"><span>◆</span> Rapid prototyping</div>
-      <div class="ticker-item"><span>◆</span> Automated code review</div>
-      <div class="ticker-item"><span>◆</span> AI pair programming</div>
-      <div class="ticker-item"><span>◆</span> Intelligent test generation</div>
-      <div class="ticker-item"><span>◆</span> Continuous monitoring</div>
-      <div class="ticker-item"><span>◆</span> Global CDN delivery</div>
-      <div class="ticker-item"><span>◆</span> Instant deployments</div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY IT WORKS -->
-<section id="why">
-  <div class="section-label reveal">Why it works</div>
-  <h2 class="reveal">A solo studio that<br>behaves like an <em>agency</em>.</h2>
-  <div class="why-grid">
+<section id="why-it-works">
+  <div class="inner">
+    <div class="section-label">Why it works</div>
+    <h2>A solo studio that behaves like an agency.</h2>
     <ul class="why-list">
-      <li class="reveal">
-        <div class="why-check">✓</div>
-        <div class="why-text">
-          <strong>One point of accountability</strong>
-          <span>From idea to launch — no handoffs, no gaps, no excuses.</span>
-        </div>
-      </li>
-      <li class="reveal" style="transition-delay:.1s">
-        <div class="why-check">✓</div>
-        <div class="why-text">
-          <strong>Lower overhead than agencies</strong>
-          <span>No large team to maintain. You only pay for results.</span>
-        </div>
-      </li>
-      <li class="reveal" style="transition-delay:.2s">
-        <div class="why-check">✓</div>
-        <div class="why-text">
-          <strong>Faster iteration cycles</strong>
-          <span>AI-enabled workflows compress months of work into weeks.</span>
-        </div>
-      </li>
-      <li class="reveal" style="transition-delay:.3s">
-        <div class="why-check">✓</div>
-        <div class="why-text">
-          <strong>Senior engineering quality</strong>
-          <span>Proven track record in product delivery, not just code.</span>
-        </div>
-      </li>
+      <li><span class="why-check">✓</span> One point of accountability — no handoffs, no gaps</li>
+      <li><span class="why-check">✓</span> Lower overhead than agencies — you pay for execution</li>
+      <li><span class="why-check">✓</span> Faster iteration with AI workflows — what takes months, we ship in weeks</li>
+      <li><span class="why-check">✓</span> Senior engineering quality — experience without the team burden</li>
     </ul>
-    <div class="why-quote reveal">
-      <blockquote>I build full-stack products from idea to production, faster and leaner than agencies, with the quality of a senior engineering team.</blockquote>
-      <cite>— Sreekanth, Founder of Your Cloud</cite>
+    <div class="quote-block">
+      <p>"We build full-stack products from idea to production, faster and leaner than agencies, with the quality of a senior engineering team."</p>
+      <cite>— BhoomDom, Solo AI Product Studio</cite>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section style="background:var(--bg);">
-  <div class="section-label reveal">Reviews</div>
-  <h2 class="reveal">What clients say.</h2>
-  <div class="testimonials-grid">
-    <div class="testimonial reveal">
-      <p>"Turned our idea into a product we could launch in 6 weeks. Communication was sharp, delivery faster than any agency we've worked with."</p>
-      <div class="test-author">
-        <div class="test-avatar" style="background:#0047ff;">N</div>
-        <div><div class="test-name">Neha</div><div class="test-role">Founder, SaaS startup</div></div>
-      </div>
-    </div>
-    <div class="testimonial reveal" style="transition-delay:.1s">
-      <p>"Highly skilled engineer with the right execution mindset. Delivered a SaaS MVP on time, with clear documentation and managed deployment."</p>
-      <div class="test-author">
-        <div class="test-avatar" style="background:#00c98d;">C</div>
-        <div><div class="test-name">Carlos</div><div class="test-role">Product Lead, fintech</div></div>
-      </div>
-    </div>
-    <div class="testimonial reveal" style="transition-delay:.2s">
-      <p>"Great clarity on what could be built fast versus iterated later. The result was a polished app and a clean handoff for growth."</p>
-      <div class="test-author">
-        <div class="test-avatar" style="background:#ff6b35;">P</div>
-        <div><div class="test-name">Priya</div><div class="test-role">Founder, marketplace</div></div>
-      </div>
-    </div>
-    <div class="testimonial reveal" style="transition-delay:.1s">
-      <p>"The AI-accelerated approach saved us time and money. Our marketplace went live ahead of schedule with features we didn't think possible."</p>
-      <div class="test-author">
-        <div class="test-avatar" style="background:#9b5de5;">A</div>
-        <div><div class="test-name">Alex</div><div class="test-role">CTO, growth product</div></div>
-      </div>
-    </div>
-    <div class="testimonial reveal" style="transition-delay:.2s">
-      <p>"Reliable and professional. Handled our complex SaaS requirements seamlessly, and the ongoing support has been invaluable for growth."</p>
-      <div class="test-author">
-        <div class="test-avatar" style="background:#f15bb5;">M</div>
-        <div><div class="test-name">Maria</div><div class="test-role">Product Manager</div></div>
-      </div>
-    </div>
-    <div class="testimonial reveal" style="transition-delay:.3s;background:var(--ink);border-color:var(--ink);display:flex;flex-direction:column;justify-content:center;">
-      <div style="font-family:'DM Serif Display',serif;font-size:32px;color:rgba(255,255,255,0.15);">★★★★★</div>
-      <div style="font-size:36px;font-family:'DM Serif Display',serif;color:#fff;margin:8px 0;line-height:1;">95%</div>
-      <div style="font-size:13px;color:rgba(255,255,255,0.45);">Client satisfaction across all engagements</div>
+<section>
+  <div class="inner">
+    <div class="section-label">Why trust us</div>
+    <h2>Guaranteed quality and delivery.</h2>
+    <div class="trust-grid">
+      <div class="trust-card"><h4>🔒 IP Protection</h4><p>Full ownership rights and NDA signed upfront.</p></div>
+      <div class="trust-card"><h4>🛠 30-Day Support</h4><p>Free bug fixes and support for one month post-launch.</p></div>
+      <div class="trust-card"><h4>⚡ AI-Enhanced Accuracy</h4><p>AI tooling for analysis and error-free code delivery.</p></div>
+      <div class="trust-card"><h4>📅 On-Time Delivery</h4><p>95% delivered on or ahead of schedule with weekly updates.</p></div>
     </div>
   </div>
 </section>
 
-<section style="background:var(--white);">
-  <div class="section-label reveal">Case study</div>
-  <h2 class="reveal">A fast SaaS launch with clear product outcomes.</h2>
-  <div class="case-study-grid">
-    <div class="case-study-card reveal">
-      <div class="case-study-pill">Problem</div>
-      <h3>Founder needed an MVP without hiring a team</h3>
-      <p>Early-stage founders were stuck between expensive agencies and solo development risk. They needed one engineer who could own planning, build, and deployment.</p>
-    </div>
-    <div class="case-study-card reveal" style="transition-delay:.1s">
-      <div class="case-study-pill">Solution</div>
-      <h3>Delivered a polished SaaS build in 6 weeks</h3>
-      <p>Built a launch-ready platform with key user flows, payment integration, and production-ready hosting. The workflow combined AI-assisted planning with focused execution.</p>
-    </div>
-    <div class="case-study-card reveal" style="transition-delay:.2s">
-      <div class="case-study-pill">Outcome</div>
-      <h3>Launched ahead of schedule with a clear roadmap</h3>
-      <p>The product launched quickly with a simplified MVP scope, strong delivery confidence, and a growth-ready foundation for faster follow-up releases.</p>
-    </div>
-  </div>
-</section>
-
-<!-- GUARANTEES -->
-<section style="background:var(--white);">
-  <div class="section-label reveal">Why trust us</div>
-  <h2 class="reveal">Guaranteed quality<br>and <em>delivery</em>.</h2>
-  <div class="guarantees">
-    <div class="guarantee reveal">
-      <div class="g-icon">🔒</div>
-      <div class="g-title">IP Protection</div>
-      <div class="g-desc">All code and designs delivered with full ownership rights. NDA signed for confidentiality.</div>
-    </div>
-    <div class="guarantee reveal" style="transition-delay:.1s">
-      <div class="g-icon">🛠️</div>
-      <div class="g-title">30-Day Support</div>
-      <div class="g-desc">Free bug fixes and support for 30 days post-launch to ensure smooth operation.</div>
-    </div>
-    <div class="guarantee reveal" style="transition-delay:.2s">
-      <div class="g-icon">🤖</div>
-      <div class="g-title">AI-Enhanced Accuracy</div>
-      <div class="g-desc">Leveraging AI for precise requirements analysis and robust, error-free code.</div>
-    </div>
-    <div class="guarantee reveal" style="transition-delay:.3s">
-      <div class="g-icon">⏰</div>
-      <div class="g-title">On-Time Delivery</div>
-      <div class="g-desc">95% of projects delivered on or ahead of schedule with transparent progress updates.</div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
 <section id="pricing">
-  <div class="section-label reveal">Pricing</div>
-  <h2 class="reveal">Transparent packages<br>for <em>global startup</em> work.</h2>
-  <div class="pricing-grid">
-    <div class="pricing-card reveal">
-      <div class="pricing-label">Starter</div>
-      <div class="pricing-name">MVP / Web App</div>
-      <div class="pricing-price">$5k–20k</div>
-      <ul class="pricing-features">
-        <li>Product-ready UX</li>
-        <li>Deployment included</li>
-        <li>Fast proof-of-concept</li>
-        <li>30-day post-launch support</li>
-      </ul>
-      <button class="btn-pricing" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get a quote →</button>
+  <div class="inner">
+    <div class="section-label">Pricing</div>
+    <h2>Transparent packages for global startup work.</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card"><h3>MVP / Web App</h3><div class="price">$5k–$20k</div><p>Fast proof-of-concept with product-ready UX and deployment.</p></div>
+      <div class="pricing-card featured"><div class="pricing-feat-badge">Most popular</div><h3>SaaS Product</h3><div class="price">$15k–$50k</div><p>Professional SaaS with recurring revenue, auth, and payments.</p></div>
+      <div class="pricing-card"><h3>Managed Retainer</h3><div class="price">$2k–$5k/mo</div><p>Ongoing support, features, and optimization post-launch.</p></div>
     </div>
-    <div class="pricing-card featured reveal" style="transition-delay:.1s">
-      <div class="pricing-label">Most Popular</div>
-      <div class="pricing-name">SaaS Product</div>
-      <div class="pricing-price">$15k–50k</div>
-      <ul class="pricing-features">
-        <li>Recurring revenue flows</li>
-        <li>Scale-ready architecture</li>
-        <li>Payment integrations</li>
-        <li>Full deployment & docs</li>
-      </ul>
-      <button class="btn-pricing" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get a quote →</button>
-    </div>
-    <div class="pricing-card reveal" style="transition-delay:.2s">
-      <div class="pricing-label">Ongoing</div>
-      <div class="pricing-name">Managed Retainer</div>
-      <div class="pricing-price">$2k–5k<sub>/mo</sub></div>
-      <ul class="pricing-features">
-        <li>Product support</li>
-        <li>Growth operations</li>
-        <li>Ongoing feature delivery</li>
-        <li>Bill in USD/EUR via Wise</li>
-      </ul>
-      <button class="btn-pricing" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get a quote →</button>
+    <p style="margin-top:1.1rem; font-size:.81rem; color:var(--muted);">Billing in USD/EUR via Wise or Deel.</p>
+  </div>
+</section>
+
+<section id="calculator">
+  <div class="inner">
+    <div class="section-label">Project calculator</div>
+    <h2>Get an instant estimate.</h2>
+    <div class="calculator">
+      <div class="calc-fields">
+        <label for="calc-type">Project type</label>
+        <select id="calc-type">
+          <option value="">Select type</option>
+          <option value="mvp">MVP / Web App</option>
+          <option value="saas">SaaS Product</option>
+          <option value="marketplace">Marketplace</option>
+          <option value="retainer">Managed Retainer</option>
+        </select>
+
+        <label for="calc-complexity">Complexity</label>
+        <select id="calc-complexity">
+          <option value="">Select complexity</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <button class="btn btn-primary" onclick="calculateQuote()">Calculate estimate</button>
+      </div>
+
+      <div class="calc-result" id="calc-result">
+        <div style="font-size:.7rem; color:var(--muted); margin-bottom:.5rem; text-transform:uppercase;">Estimated range</div>
+        <div class="calc-price" id="calc-price">$5k–$20k</div>
+        <p id="calc-desc-out">Select project type and complexity.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- RESOURCES -->
-<section id="resources" style="background:var(--bg);">
-  <div class="section-label reveal">Resources</div>
-  <h2 class="reveal">Content ideas for founders building SaaS with one engineer.</h2>
-  <div class="resources-grid">
-    <article class="resource-card reveal">
-      <h3>How to build an MVP without a team</h3>
-      <p>Practical guidance on launching a product fast, without a full agency or in-house engineering team.</p>
-    </article>
-    <article class="resource-card reveal" style="transition-delay:.1s">
-      <h3>AI-accelerated SaaS development</h3>
-      <p>How AI tooling can speed planning, design, and development while keeping delivery quality high.</p>
-    </article>
-    <article class="resource-card reveal" style="transition-delay:.2s">
-      <h3>Hire a solo product engineer</h3>
-      <p>Why founders should consider a trusted solo studio to ship their first MVP and retain control over the product.</p>
-    </article>
-  </div>
-</section>
-
-<!-- CALCULATOR -->
-<section class="calc-section">
-  <div class="section-label reveal">Project Calculator</div>
-  <h2 class="reveal">Estimate your<br><em>project cost</em> instantly.</h2>
-  <div class="calc-wrapper reveal">
-    <div class="calc-row">
-      <label for="proj-desc">Describe your project</label>
-      <textarea id="proj-desc" placeholder="E.g. A SaaS platform for freelancers to invoice clients..."></textarea>
-    </div>
-    <div class="calc-row">
-      <label for="complexity">Complexity level</label>
-      <select id="complexity">
-        <option value="">Select complexity</option>
-        <option value="low">Low — Simple features, standard UI</option>
-        <option value="med">Medium — Moderate complexity, custom integrations</option>
-        <option value="high">High — Advanced features, complex architecture</option>
-      </select>
-    </div>
-    <button class="btn-primary" onclick="calcQuote()" style="width:100%;justify-content:center;">Calculate estimate →</button>
-    <div class="calc-result" id="calc-result">
-      <div class="r-label">Estimated range</div>
-      <div class="r-price" id="r-price">$5,000 – $15,000</div>
-      <div class="r-sub">Final quote confirmed by email after inquiry submission.</div>
+<section id="blog">
+  <div class="inner">
+    <div class="section-label">Resources</div>
+    <h2>Insights for startup founders.</h2>
+    <div class="blog-grid">
+      <div class="blog-card" onclick="openBlog(0)"><div class="blog-tag">Guide · 6 min</div><h4>How to build an MVP without hiring a team in 2025</h4><p>Practical guidance on launching fast without agencies or large teams.</p><div class="blog-read">Read →</div></div>
+      <div class="blog-card" onclick="openBlog(1)"><div class="blog-tag">Case study · 5 min</div><h4>From zero to SaaS in 4 weeks: AI-accelerated build story</h4><p>How solo studio replaced 6-month agency project in 4 weeks.</p><div class="blog-read">Read →</div></div>
+      <div class="blog-card" onclick="openBlog(2)"><div class="blog-tag">Comparison · 7 min</div><h4>Solo engineer vs agency: founder's honest breakdown</h4><p>Tradeoffs in cost, speed, quality — when to choose what.</p><div class="blog-read">Read →</div></div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="cta-section" id="contact">
-  <div class="section-label">Ready to start?</div>
-  <h2>Book a quick planning call or send a note.</h2>
-  <p>Tell me your idea, timeline, and desired outcome. I'll reply with a realistic delivery plan and pricing range.</p>
-  <div class="contact-actions reveal">
-    <a href="https://calendly.com/your-schedule/15min" class="btn-primary" target="_blank" rel="noreferrer">Book a free call</a>
-    <a href="#contact-form" class="btn-secondary">Send a quick note</a>
+<div class="blog-modal" id="blog-modal">
+  <div class="blog-modal-inner">
+    <button class="blog-close" onclick="closeBlog()">✕</button>
+    <div class="blog-modal-tag" id="modal-tag"></div>
+    <h2 id="modal-title"></h2>
+    <div class="blog-meta" id="modal-meta"></div>
+    <div class="blog-body" id="modal-body"></div>
   </div>
-  <p style="color: rgba(255,255,255,0.65); max-width: 720px; margin: 0 auto 24px;">Use the call scheduler for the fastest booking, or complete the form below if you'd like a written response.</p>
-  <div class="google-form-container" id="contact-form">
-    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-      <input type="hidden" name="access_key" value="b41cdeb8-fc8c-4672-96a1-3a43ed1f71f2">
-      <div class="form-row">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
+</div>
+
+<section id="contact">
+  <div class="inner">
+    <div class="contact-box">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Let's talk about your idea.</h2>
+          <p>Tell us your vision, timeline, and goals. We'll get back to you in 24 hours with a realistic plan.</p>
+          <div class="contact-meta">
+            <div class="contact-meta-item"><div class="contact-meta-icon">📧</div><div><strong>Email</strong><div style="font-size:.78rem;color:var(--muted);">bhoomdom@gmail.com</div></div></div>
+            <div class="contact-meta-item"><div class="contact-meta-icon">🌍</div><div><strong>Based in</strong><div style="font-size:.78rem;color:var(--muted);">India / Globally remote</div></div></div>
+            <div class="contact-meta-item"><div class="contact-meta-icon">⏱</div><div><strong>Response time</strong><div style="font-size:.78rem;color:var(--muted);">24 hours</div></div></div>
+          </div>
+        </div>
+
+        <form id="contact-form" class="form-fields" onsubmit="submitForm(event)">
+          <input type="hidden" name="access_key" value="b41cdeb8-fc8c-4672-96a1-3a43ed1f71f2">
+          <div><label>Name *</label><input type="text" name="name" required></div>
+          <div><label>Email *</label><input type="email" name="email" required></div>
+          <div><label>Company / Project</label><input type="text" name="company"></div>
+          <div><label>Project brief *</label><textarea name="message" required placeholder="What are you building? Timeline?"></textarea></div>
+          <button type="submit" class="form-submit" id="submit-btn">Send message →</button>
+          <p class="form-note">Your message is encrypted and will only be seen by us.</p>
+        </form>
+
+        <div id="form-success" class="form-success">
+          <h3>Got it — thanks for reaching out!</h3>
+          <p>We'll review your project and send you a reply within 24 hours.</p>
+        </div>
       </div>
-      <div class="form-row">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-row">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-      <button type="submit" class="submit-btn">Submit</button>
-    </form>
+    </div>
   </div>
 </section>
 
 <footer>
-  <div>
-    <a href="#" class="logo" style="display:inline-block;margin-bottom:4px;">Your<span>Cloud</span></a>
-    <p>Solo AI product studio · bhoomdom.com</p>
-  </div>
-  <div class="footer-links">
-    <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact">Contact</a>
-    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-  </div>
+  <p>© 2025 BhoomDom · Solo AI Product Studio · <a href="mailto:bhoomdom@gmail.com">bhoomdom@gmail.com</a></p>
 </footer>
 
 <script>
-  /* ── Scroll reveal ── */
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  /* ── Progress bars animate on scroll ── */
-  const barObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.querySelectorAll('.cap-bar-fill').forEach(bar => {
-          bar.style.width = bar.dataset.width + '%';
-        });
-      }
-    });
-  }, { threshold: 0.3 });
-  document.querySelectorAll('.cap-card').forEach(card => barObserver.observe(card));
-
-  /* ── Calculator ── */
-  function calcQuote() {
-    const c = document.getElementById('complexity').value;
-    if (!c) { alert('Please select a complexity level.'); return; }
-    const ranges = { low: '$5,000 – $12,000', med: '$15,000 – $30,000', high: '$30,000 – $50,000' };
-    document.getElementById('r-price').textContent = ranges[c];
-    const res = document.getElementById('calc-result');
-    res.classList.add('show');
-    res.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+// Theme toggle functionality
+const themes = {
+  light: {
+    '--bg': '#f5f3ee', '--surface': '#ffffff', '--surface2': '#f8f6f0', '--border': 'rgba(0,0,0,0.1)',
+    '--text': '#0d0d0d', '--muted': '#7a7a7a', '--accent': '#0047FF', '--accent-dim': 'rgba(0,71,255,0.08)',
+    '--accent-dark': '#0033cc', '--nav-bg': 'rgba(245,243,238,0.92)', '--option-bg': '#ffffff'
+  },
+  dark: {
+    '--bg': '#0b0b0b', '--surface': '#141414', '--surface2': '#1c1c1c', '--border': '#262626',
+    '--text': '#f0ede8', '--muted': '#888480', '--accent': '#c8f04a', '--accent-dim': 'rgba(200,240,74,0.08)',
+    '--accent-dark': '#9bbf2e', '--nav-bg': 'rgba(11,11,11,0.88)', '--option-bg': '#1c1c1c'
   }
+};
 
-  /* ── Submit button feedback ── */
-  function handleSubmit(btn) {
-    btn.textContent = 'Message sent ✓';
-    btn.style.background = '#00c98d';
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.textContent = 'Send message →';
-      btn.style.background = '';
-      btn.disabled = false;
-    }, 3000);
+function applyTheme(theme) {
+  const root = document.documentElement;
+  Object.keys(themes[theme]).forEach(prop => {
+    root.style.setProperty(prop, themes[theme][prop]);
+  });
+  // Update nav background
+  document.querySelector('nav').style.background = themes[theme]['--nav-bg'];
+  // Update button colors
+  const navCta = document.querySelector('.nav-cta');
+  const btnPrimary = document.querySelectorAll('.btn-primary');
+  const formSubmit = document.querySelector('.form-submit');
+  if (theme === 'dark') {
+    navCta.style.color = '#0b0b0b';
+    btnPrimary.forEach(btn => btn.style.color = '#0b0b0b');
+    if (formSubmit) formSubmit.style.color = '#0b0b0b';
+  } else {
+    navCta.style.color = '#ffffff';
+    btnPrimary.forEach(btn => btn.style.color = '#ffffff');
+    if (formSubmit) formSubmit.style.color = '#ffffff';
   }
+}
+
+function updateThemeButton(theme) {
+  const btn = document.getElementById('theme-toggle');
+  if (theme === 'light') {
+    btn.textContent = '🌙 Dark';
+  } else {
+    btn.textContent = '☀️ Light';
+  }
+}
+
+function toggleTheme() {
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  localStorage.setItem('theme', newTheme);
+  applyTheme(newTheme);
+}
+
+// Initialize theme on load
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  applyTheme(savedTheme);
+  document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+});
+
+function calculateQuote() {
+  const type = document.getElementById('calc-type').value;
+  const complexity = document.getElementById('calc-complexity').value;
+  if (!type || !complexity) { alert('Please select both type and complexity.'); return; }
+  const matrix = {
+    mvp:         { low: '$5k–$8k', medium: '$9k–$15k', high: '$15k–$22k' },
+    saas:        { low: '$10k–$18k', medium: '$18k–$30k', high: '$30k–$50k' },
+    marketplace: { low: '$12k–$20k', medium: '$20k–$35k', high: '$35k–$60k' },
+    retainer:    { low: '$2k/mo', medium: '$3k–$3.5k/mo', high: '$4k–$5k/mo' },
+  };
+  document.getElementById('calc-price').textContent = matrix[type][complexity];
+  document.getElementById('calc-result').classList.add('visible');
+}
+
+async function submitForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  btn.textContent = 'Sending…'; btn.disabled = true;
+  const form = document.getElementById('contact-form');
+  const data = Object.fromEntries(new FormData(form));
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+    const result = await res.json();
+    if (result.success) {
+      form.style.display = 'none';
+      document.getElementById('form-success').classList.add('visible');
+    } else {
+      btn.textContent = 'Send message →'; btn.disabled = false;
+      alert('Something went wrong. Email bhoomdom@gmail.com instead.');
+    }
+  } catch {
+    btn.textContent = 'Send message →'; btn.disabled = false;
+    alert('Network error. Email bhoomdom@gmail.com instead.');
+  }
+}
+
+const blogs = [
+  { tag: 'Guide · 6 min read', title: 'How to build an MVP without hiring a team in 2025', meta: 'By BhoomDom · April 2025', body: '<h3>Why solo MVPs are winning</h3><p>Early-stage startups can no longer justify large teams. The fastest-growing companies use solo engineers and AI workflows.</p><h3>The playbook</h3><p><strong>1. Start with one clear problem.</strong> Don\'t build a platform.</p><p><strong>2. Use modern tools where they fit.</strong> Vercel, Stripe, Auth0 — focus on your unique value.</p><p><strong>3. Design for simplicity.</strong> Every feature adds complexity. Ship simple, iterate.</p><p><strong>4. Use AI as co-pilot.</strong> Cursor and Copilot handle boilerplate. Spend time on architecture and UX.</p><p><strong>5. Launch before you\'re ready.</strong> 60% confidence beats perfect never.</p><p>Ready to build? <a href="#contact" style="color:var(--accent)">Get in touch</a>.</p>' },
+  { tag: 'Case study · 5 min', title: 'From zero to SaaS in 4 weeks', meta: 'By BhoomDom · March 2025', body: '<h3>The brief</h3><p>Non-technical founder, validated idea, 4 weeks to show investors a working product.</p><h3>The challenge</h3><p>Real-time sync, custom workflows, payments, role-based access, professional UI.</p><h3>How we did it</h3><p><strong>Week 1:</strong> Design sprint with Figma + v0.dev.<br><strong>Week 2-3:</strong> Full-stack build with Cursor + GitHub Copilot.<br><strong>Week 4:</strong> Polish, test, deploy.</p><h3>The result</h3><p>50 users by day 28. 92% retention. Closed a $500k round.</p><p>What takes 6 months normally took 4 weeks.</p>' },
+  { tag: 'Comparison · 7 min', title: 'Solo engineer vs agency breakdown', meta: 'By BhoomDom · February 2025', body: '<h3>The tradeoff</h3><p><strong>Solo:</strong> 3-8 weeks, $8k-$20k. High quality if experienced.<br><strong>Agency:</strong> 12-24 weeks, $40k-$150k. Variable quality.<br><strong>In-house:</strong> 20-40 weeks, $120k-$400k/mo. High quality if managed.</p><h3>When to hire solo</h3><p>Validated idea, need speed, care about cost, want single contact.</p><h3>When to hire agency</h3><p>Need multiple specialists, flexible timeline, avoid hiring burden.</p><h3>When to build in-house</h3><p>Funded $500k+, need to scale fast, complex product, building culture.</p><p>Not sure? <a href="#contact" style="color:var(--accent)">Let\'s talk.</a></p>' }
+];
+
+function openBlog(i) {
+  const b = blogs[i];
+  document.getElementById('modal-tag').textContent = b.tag;
+  document.getElementById('modal-title').textContent = b.title;
+  document.getElementById('modal-meta').textContent = b.meta;
+  document.getElementById('modal-body').innerHTML = b.body;
+  document.getElementById('blog-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeBlog() {
+  document.getElementById('blog-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('blog-modal').addEventListener('click', function(e) { if (e.target === this) closeBlog(); });
 </script>
+
 </body>
 </html>
