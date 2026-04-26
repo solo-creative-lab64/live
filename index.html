@@ -39,6 +39,7 @@
     nav { position: sticky; top: 0; z-index: 200; background: var(--nav-bg); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; height: 58px; }
     .nav-logo { font-family: var(--serif); font-size: 1.15rem; letter-spacing: 0.01em; color: var(--text); }
     .nav-logo span { color: var(--accent); }
+    .nav-logo-img { width: auto; height: 70px; display: block; }
     .nav-links { display: flex; gap: 1.75rem; list-style: none; font-size: 0.84rem; color: var(--muted); }
     .nav-links a:hover { color: var(--text); transition: color .2s; }
     .nav-actions { display: flex; gap: 1rem; align-items: center; }
@@ -200,7 +201,7 @@
 <body>
 
 <nav id="top">
-  <div class="nav-logo">Bhoom<span>Dom</span></div>
+  <img src="bhoomdom-logo.svg" alt="BhoomDom" class="nav-logo-img" style="height: 70px;">
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#why-it-works">Why it works</a></li>

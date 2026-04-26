@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 90" width="160" height="90" role="img">
+  <title>BhoomDom — Solo AI Product Studio</title>
+
+  <!-- B Mark: vertical stem + two stroked arcs (exact from concept 1) -->
+  <g transform="translate(8, 10)">
+    <!-- Vertical stem -->
+    <rect x="0" y="0" width="6" height="44" rx="2" fill="#2563eb"/>
+    <!-- Top arc -->
+    <path d="M6 0 Q30 0 30 11 Q30 22 6 22" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+    <!-- Bottom arc (wider) -->
+    <path d="M6 22 Q34 22 34 33 Q34 44 6 44" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Bhoom (bold, blue) -->
+  <text x="60" y="38"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="22" font-weight="600" fill="#2563eb" letter-spacing="-0.5">Bhoom</text>
+
+  <!-- Dom (light, dark) -->
+  <text x="60" y="60"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="22" font-weight="300" fill="#141413" letter-spacing="2">Dom</text>
+
+  <!-- Tagline -->
+  <text x="60" y="74"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="7" font-weight="400" fill="#94a3b8" letter-spacing="2.5">SOLO AI STUDIO</text>
+</svg>
