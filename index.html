@@ -3,548 +3,971 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BhoomDom | Solo AI Product Studio — SaaS & MVP Builds for Startups</title>
-  <meta name="description" content="Build your SaaS, MVP, or marketplace without hiring a team. BhoomDom is a solo AI product studio delivering agency-quality software — faster and leaner." />
-  <meta name="keywords" content="solo product studio, MVP development, SaaS build, AI-accelerated development, startup engineer, no-team product delivery, marketplace build" />
+  <title>BhoomDom | Product Studio — SaaS, MVP & Web App Development</title>
+  <meta name="description" content="BhoomDom is a product studio that designs and builds software products — MVPs, SaaS platforms, marketplaces, and full-stack web applications. From concept to production." />
+  <meta name="keywords" content="product studio, MVP development, SaaS build, web application development, software studio, startup engineering" />
   <meta name="author" content="BhoomDom" />
-  <meta property="og:title" content="BhoomDom | Solo AI Product Studio" />
-  <meta property="og:description" content="Build software products from idea to production without hiring a team." />
+  <meta property="og:title" content="BhoomDom | Product Studio" />
+  <meta property="og:description" content="We design and build software products that work. MVPs, SaaS, marketplaces — from concept to production." />
   <meta property="og:url" content="https://bhoomdom.com" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://bhoomdom.com/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="BhoomDom | Solo AI Product Studio" />
-  <meta name="twitter:description" content="Build software products from idea to production without hiring a team." />
+  <meta name="twitter:title" content="BhoomDom | Product Studio" />
+  <meta name="twitter:description" content="We design and build software products that work." />
   <link rel="canonical" href="https://bhoomdom.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LTBGKCV7ZK"></script>
   <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-LTBGKCV7ZK');</script>
 
   <style>
+    /* ═══════════════════════════════════════════════
+       DESIGN SYSTEM
+    ═══════════════════════════════════════════════ */
     :root {
-      --bg: #f5f3ee; --surface: #ffffff; --surface2: #f8f6f0; --border: rgba(0,0,0,0.1);
-      --text: #0d0d0d; --muted: #7a7a7a; --accent: #0047FF; --accent-dim: rgba(0,71,255,0.08);
-      --accent-dark: #0033cc; --serif: 'DM Serif Display', Georgia, serif;
-      --sans: 'DM Sans', system-ui, sans-serif; --radius: 10px;
+      --bg: #f5f3ee;
+      --surface: #ffffff;
+      --surface2: #f8f6f0;
+      --surface3: #efece5;
+      --border: rgba(0,0,0,0.08);
+      --border-strong: rgba(0,0,0,0.14);
+      --text: #0d0d0d;
+      --text-secondary: #3d3d3d;
+      --muted: #7a7a7a;
+      --accent: #0047FF;
+      --accent-dim: rgba(0,71,255,0.06);
+      --accent-mid: rgba(0,71,255,0.12);
+      --accent-dark: #0033cc;
+      --green: #16a34a;
+      --green-dim: rgba(22,163,74,0.08);
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --radius: 10px;
+      --radius-lg: 16px;
+      --nav-bg: rgba(245,243,238,0.92);
+      --option-bg: #ffffff;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+      --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
 
-    /* NAV */
-    nav { position: sticky; top: 0; z-index: 200; background: var(--nav-bg); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; height: 58px; }
-    .nav-logo { font-family: var(--serif); font-size: 1.15rem; letter-spacing: 0.01em; color: var(--text); }
-    .nav-logo span { color: var(--accent); }
+    /* ═══════════════════════════════════════════════
+       NAVIGATION
+    ═══════════════════════════════════════════════ */
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      background: var(--nav-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2rem; height: 60px;
+    }
     .nav-logo-img { width: auto; height: 70px; display: block; }
-    .nav-links { display: flex; gap: 1.75rem; list-style: none; font-size: 0.84rem; color: var(--muted); }
-    .nav-links a:hover { color: var(--text); transition: color .2s; }
-    .nav-actions { display: flex; gap: 1rem; align-items: center; }
-    .theme-btn { background: transparent; border: none; color: var(--muted); padding: 0.5rem; border-radius: 6px; font-size: 1.2rem; cursor: pointer; transition: all .2s; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; }
-    .theme-btn:hover { background: var(--surface2); color: var(--accent); transform: scale(1.1); }
-    .nav-cta { background: var(--accent); color: #ffffff; font-weight: 600; font-size: 0.82rem; padding: 0.42rem 1.1rem; border-radius: 6px; white-space: nowrap; transition: background .2s; }
-    .nav-cta:hover { background: var(--accent-dark); }
+    .nav-links {
+      display: flex; gap: 2rem; list-style: none;
+      font-size: 0.84rem; font-weight: 400; color: var(--muted);
+    }
+    .nav-links a { transition: color var(--transition); }
+    .nav-links a:hover { color: var(--text); }
+    .nav-actions { display: flex; gap: 0.75rem; align-items: center; }
+    .theme-btn {
+      background: transparent; border: 1px solid var(--border);
+      color: var(--muted); padding: 0.4rem; border-radius: 8px;
+      font-size: 1rem; cursor: pointer; transition: all var(--transition);
+      display: flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px;
+    }
+    .theme-btn:hover { background: var(--surface); color: var(--accent); border-color: var(--accent); }
+    .nav-cta {
+      background: var(--accent); color: #ffffff; font-weight: 600;
+      font-size: 0.82rem; padding: 0.5rem 1.2rem; border-radius: 8px;
+      white-space: nowrap; transition: all var(--transition);
+    }
+    .nav-cta:hover { background: var(--accent-dark); transform: translateY(-1px); }
 
-    /* HERO */
-    .hero { min-height: 90vh; display: flex; flex-direction: column; justify-content: center; padding: 7rem 2rem 4rem; max-width: 960px; margin: 0 auto; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.73rem; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent); border: 1px solid rgba(200,240,74,.35); border-radius: 100px; padding: 0.28rem 0.85rem; margin-bottom: 2rem; }
-    .hero-badge::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
+    /* ═══════════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════════ */
+    .hero {
+      min-height: 85vh; display: flex; flex-direction: column;
+      justify-content: center; padding: 7rem 2rem 5rem;
+      max-width: 880px; margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--accent);
+      border: 1px solid var(--accent-mid); border-radius: 100px;
+      padding: 0.3rem 0.9rem; margin-bottom: 2rem;
+      width: fit-content;
+    }
+    .hero-badge::before {
+      content: ""; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--green); animation: pulse 2.5s ease-in-out infinite;
+    }
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
-    h1 { font-family: var(--serif); font-size: clamp(2.4rem, 5.5vw, 4rem); line-height: 1.1; font-weight: 400; margin-bottom: 1.5rem; max-width: 820px; }
+    h1 {
+      font-family: var(--serif); font-size: clamp(2.5rem, 5.5vw, 3.8rem);
+      line-height: 1.1; font-weight: 400; margin-bottom: 1.5rem;
+      max-width: 780px; color: var(--text);
+    }
     h1 em { font-style: italic; color: var(--accent); }
-    .hero-sub { font-size: 1.05rem; color: var(--muted); max-width: 520px; margin-bottom: 2.5rem; line-height: 1.75; }
+    .hero-sub {
+      font-size: 1.08rem; color: var(--muted); max-width: 540px;
+      margin-bottom: 2.5rem; line-height: 1.8;
+    }
     .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
-    .btn { display: inline-block; font-family: var(--sans); font-size: 0.93rem; font-weight: 600; padding: 0.78rem 1.7rem; border-radius: 8px; cursor: pointer; transition: all .2s; border: none; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-family: var(--sans); font-size: 0.93rem; font-weight: 600;
+      padding: 0.82rem 1.8rem; border-radius: 10px; cursor: pointer;
+      transition: all var(--transition); border: none;
+    }
     .btn-primary { background: var(--accent); color: #ffffff; }
-    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
-    .btn-ghost { background: transparent; border: 1px solid var(--border); color: var(--muted); }
-    .btn-ghost:hover { border-color: var(--muted); color: var(--text); }
+    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,71,255,0.2); }
+    .btn-ghost { background: transparent; border: 1px solid var(--border-strong); color: var(--text-secondary); }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
-    /* STATS */
-    .stats { display: grid; grid-template-columns: repeat(5,1fr); border: 1px solid var(--border); border-radius: 12px; margin: 0 auto 5rem; max-width: 960px; overflow: hidden; }
-    .stat { padding: 1.6rem; border-right: 1px solid var(--border); text-align: center; }
-    .stat:last-child { border-right: none; }
-    .stat-num { font-family: var(--serif); font-size: 2.1rem; color: var(--accent); display: block; }
-    .stat-label { font-size: 0.78rem; color: var(--muted); margin-top: .2rem; }
+    /* ═══════════════════════════════════════════════
+       SECTIONS BASE
+    ═══════════════════════════════════════════════ */
+    section { padding: 6rem 2rem; }
+    .inner { max-width: 880px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.7rem; letter-spacing: .15em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: .6rem; font-weight: 600;
+    }
+    h2 {
+      font-family: var(--serif); font-size: clamp(1.7rem, 3vw, 2.4rem);
+      font-weight: 400; margin-bottom: 1rem; line-height: 1.2;
+    }
+    .section-desc {
+      font-size: 0.95rem; color: var(--muted); max-width: 560px;
+      line-height: 1.75; margin-bottom: 2.5rem;
+    }
 
-    /* SECTION BASE */
-    section { padding: 5rem 2rem; }
-    .inner { max-width: 960px; margin: 0 auto; }
-    .section-label { font-size: 0.71rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: .6rem; font-weight: 500; }
-    h2 { font-family: var(--serif); font-size: clamp(1.75rem, 3.2vw, 2.5rem); font-weight: 400; margin-bottom: 2.25rem; line-height: 1.2; }
+    /* ═══════════════════════════════════════════════
+       WHAT WE BUILD — SERVICES
+    ═══════════════════════════════════════════════ */
+    .services-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    }
+    .service-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 2rem;
+      transition: all var(--transition); position: relative;
+    }
+    .service-card:hover {
+      border-color: var(--accent-mid);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .service-num {
+      font-size: 0.68rem; color: var(--accent); font-weight: 700;
+      margin-bottom: 0.75rem; letter-spacing: 0.08em;
+    }
+    .service-card h3 {
+      font-family: var(--serif); font-size: 1.15rem; font-weight: 400;
+      margin-bottom: 0.5rem; line-height: 1.3;
+    }
+    .service-card p {
+      font-size: 0.86rem; color: var(--muted); line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    .service-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .service-tag {
+      font-size: 0.68rem; font-weight: 500; color: var(--accent);
+      background: var(--accent-dim); border-radius: 4px;
+      padding: 0.18rem 0.55rem; letter-spacing: 0.02em;
+    }
 
-    /* SERVICES */
-    .services-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-    .service-card { background: var(--surface); padding: 2rem; transition: background .2s; }
-    .service-card:hover { background: var(--surface2); }
-    .service-num { font-size: .7rem; color: var(--accent); font-weight: 600; margin-bottom: .6rem; letter-spacing: .08em; }
-    .service-card h3 { font-family: var(--serif); font-size: 1.12rem; font-weight: 400; margin-bottom: .4rem; }
-    .service-card p { font-size: .87rem; color: var(--muted); }
+    /* ═══════════════════════════════════════════════
+       HOW WE WORK — PROCESS TIMELINE
+    ═══════════════════════════════════════════════ */
+    .process-grid {
+      display: grid; grid-template-columns: 1fr; gap: 0;
+      position: relative;
+    }
+    .process-step {
+      display: grid; grid-template-columns: 80px 1fr;
+      gap: 1.5rem; position: relative;
+      padding-bottom: 2.5rem;
+    }
+    .process-step:last-child { padding-bottom: 0; }
+    .process-marker {
+      display: flex; flex-direction: column; align-items: center;
+      position: relative;
+    }
+    .process-dot {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--accent-dim); border: 2px solid var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.78rem; font-weight: 700; color: var(--accent);
+      z-index: 2; flex-shrink: 0;
+    }
+    .process-line {
+      width: 2px; flex: 1; background: var(--border-strong);
+      margin-top: 0.5rem;
+    }
+    .process-step:last-child .process-line { display: none; }
+    .process-content {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 1.75rem;
+      transition: all var(--transition);
+    }
+    .process-content:hover {
+      border-color: var(--accent-mid);
+      box-shadow: var(--shadow-sm);
+    }
+    .process-phase {
+      font-size: 0.68rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.15rem;
+    }
+    .process-week {
+      font-size: 0.72rem; color: var(--muted); margin-bottom: 0.6rem;
+    }
+    .process-content h3 {
+      font-family: var(--serif); font-size: 1.1rem; font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+    .process-content p {
+      font-size: 0.86rem; color: var(--muted); line-height: 1.7;
+    }
 
-    /* CASE STUDIES */
-    .case-studies { display: flex; flex-direction: column; gap: 1.5rem; }
-    .cs-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 2.25rem; position: relative; overflow: hidden; }
-    .cs-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); }
-    .cs-tag { font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--accent); margin-bottom: .75rem; }
-    .cs-card h3 { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; margin-bottom: .65rem; }
-    .cs-card > p { font-size: .88rem; color: var(--muted); margin-bottom: 1.25rem; line-height: 1.75; }
-    .cs-cols { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-bottom: 1.25rem; }
-    .cs-col label { font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); display: block; margin-bottom: .3rem; }
-    .cs-col p { font-size: .86rem; line-height: 1.6; }
-    .cs-result { padding: .85rem 1.1rem; background: var(--accent-dim); border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; font-size: .86rem; }
-    .cs-result strong { color: var(--accent); }
-    .cs-meta { display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; }
-    .cs-pill { font-size: .72rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 100px; padding: .2rem .75rem; color: var(--muted); }
+    /* ═══════════════════════════════════════════════
+       TECH STACK
+    ═══════════════════════════════════════════════ */
+    .tech-categories { display: flex; flex-direction: column; gap: 1.5rem; }
+    .tech-category {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 1.5rem 1.75rem;
+    }
+    .tech-cat-label {
+      font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.85rem;
+    }
+    .tech-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tech-pill {
+      font-size: 0.82rem; font-weight: 500; color: var(--text-secondary);
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 0.4rem 0.85rem;
+      transition: all var(--transition);
+    }
+    .tech-pill:hover {
+      border-color: var(--accent); color: var(--accent);
+      background: var(--accent-dim);
+    }
 
-    /* WHY */
-    .why-list { list-style: none; display: flex; flex-direction: column; gap: .85rem; }
-    .why-list li { display: flex; gap: 1rem; align-items: flex-start; padding: 1.2rem 1.4rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; font-size: .93rem; }
-    .why-check { color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: .05rem; }
-    .quote-block { margin-top: 2rem; padding: 1.5rem 2rem; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; }
-    .quote-block p { font-family: var(--serif); font-size: 1.12rem; font-style: italic; }
-    .quote-block cite { display: block; margin-top: .6rem; font-size: .8rem; color: var(--muted); font-style: normal; }
+    /* ═══════════════════════════════════════════════
+       STUDIO PHILOSOPHY
+    ═══════════════════════════════════════════════ */
+    .philosophy-content {
+      max-width: 640px;
+    }
+    .philosophy-content p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.85; margin-bottom: 1.25rem;
+    }
+    .philosophy-content p strong { color: var(--text); }
+    .philosophy-quote {
+      margin-top: 2rem; padding: 1.5rem 2rem;
+      background: var(--surface); border: 1px solid var(--border);
+      border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    .philosophy-quote p {
+      font-family: var(--serif); font-size: 1.1rem;
+      font-style: italic; color: var(--text); margin-bottom: 0;
+      line-height: 1.6;
+    }
 
-    /* TRUST */
-    .trust-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; }
-    .trust-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem; }
-    .trust-card h4 { font-size: .9rem; font-weight: 600; margin-bottom: .45rem; }
-    .trust-card p { font-size: .81rem; color: var(--muted); line-height: 1.65; }
+    /* ═══════════════════════════════════════════════
+       GUARANTEE
+    ═══════════════════════════════════════════════ */
+    .guarantee-intro {
+      font-size: 0.95rem; color: var(--muted); max-width: 580px;
+      line-height: 1.8; margin-bottom: 2rem;
+    }
+    .guarantee-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    }
+    .guarantee-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 1.6rem;
+      display: flex; gap: 1rem; align-items: flex-start;
+      transition: all var(--transition);
+    }
+    .guarantee-card:hover {
+      border-color: var(--green);
+      box-shadow: var(--shadow-sm);
+    }
+    .guarantee-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: var(--green-dim); color: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .guarantee-card h4 {
+      font-size: 0.9rem; font-weight: 600; margin-bottom: 0.3rem;
+    }
+    .guarantee-card p {
+      font-size: 0.82rem; color: var(--muted); line-height: 1.65;
+    }
 
-    /* PRICING */
-    .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
-    .pricing-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; transition: border-color .2s; }
-    .pricing-card:hover { border-color: var(--accent); }
-    .pricing-card.featured { border-color: var(--accent); }
-    .pricing-feat-badge { font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: #0b0b0b; background: var(--accent); border-radius: 4px; padding: .15rem .5rem; margin-bottom: .6rem; display: inline-block; }
-    .pricing-card h3 { font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: .6rem; font-weight: 500; }
-    .price { font-family: var(--serif); font-size: 1.8rem; color: var(--accent); margin-bottom: .6rem; }
-    .pricing-card p { font-size: .84rem; color: var(--muted); }
-
-    /* CALCULATOR */
-    .calculator { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 2.25rem; }
-    .calc-fields { display: flex; flex-direction: column; gap: 1.1rem; }
-    .calc-fields textarea, .calc-fields select { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: var(--sans); font-size: .91rem; padding: .82rem 1rem; outline: none; transition: border-color .2s; }
-    .calc-fields textarea:focus, .calc-fields select:focus { border-color: var(--accent); }
-    .calc-fields select option { background: var(--option-bg); }
-    .calc-fields textarea { min-height: 90px; resize: vertical; }
-    .calc-result { margin-top: 1.5rem; padding: 1.5rem; background: var(--accent-dim); border: 1px solid var(--accent); border-radius: var(--radius); display: none; }
-    .calc-result.visible { display: block; }
-    .calc-price { font-family: var(--serif); font-size: 2rem; color: var(--accent); margin-bottom: .4rem; }
-    .calc-result p { font-size: .84rem; color: var(--muted); }
-
-    /* BLOG */
-    .blog-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
-    .blog-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.6rem; cursor: pointer; transition: border-color .2s; }
-    .blog-card:hover { border-color: var(--accent); }
-    .blog-tag { font-size: .69rem; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); font-weight: 600; margin-bottom: .5rem; }
-    .blog-card h4 { font-family: var(--serif); font-size: 1rem; font-weight: 400; line-height: 1.4; margin-bottom: .5rem; }
-    .blog-card p { font-size: .8rem; color: var(--muted); line-height: 1.65; }
-    .blog-read { font-size: .78rem; color: var(--accent); margin-top: .85rem; }
-
-    /* Blog modal */
-    .blog-modal { display: none; position: fixed; inset: 0; z-index: 500; background: rgba(0,0,0,.8); backdrop-filter: blur(8px); padding: 2rem 1rem; overflow-y: auto; }
-    .blog-modal.open { display: flex; align-items: flex-start; justify-content: center; }
-    .blog-modal-inner { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; max-width: 720px; width: 100%; padding: 2.5rem; position: relative; margin: auto; }
-    .blog-close { position: absolute; top: 1.25rem; right: 1.25rem; background: var(--surface2); border: 1px solid var(--border); color: var(--muted); border-radius: 6px; padding: .3rem .8rem; font-size: .8rem; cursor: pointer; }
-    .blog-modal-tag { font-size: .7rem; text-transform: uppercase; letter-spacing: .12em; color: var(--accent); font-weight: 600; margin-bottom: .75rem; }
-    .blog-modal-inner h2 { font-family: var(--serif); font-size: 1.75rem; font-weight: 400; margin-bottom: .5rem; line-height: 1.25; }
-    .blog-meta { font-size: .78rem; color: var(--muted); margin-bottom: 1.75rem; }
-    .blog-body h3 { font-family: var(--serif); font-size: 1.12rem; font-weight: 400; margin: 1.5rem 0 .5rem; }
-    .blog-body p { font-size: .9rem; color: var(--muted); line-height: 1.8; margin-bottom: .85rem; }
-    .blog-body ul { margin: .5rem 0 .85rem 1.25rem; }
-    .blog-body ul li { font-size: .88rem; color: var(--muted); line-height: 1.75; }
-    .blog-body strong { color: var(--text); }
-
-    /* CONTACT */
-    .contact-box { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 3rem; }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: start; }
-    .contact-info h2 { margin-bottom: .85rem; }
-    .contact-info p { color: var(--muted); font-size: .9rem; line-height: 1.8; margin-bottom: 1.5rem; }
-    .contact-meta { display: flex; flex-direction: column; gap: .65rem; }
-    .contact-meta-item { display: flex; align-items: center; gap: .7rem; font-size: .83rem; color: var(--muted); }
-    .contact-meta-icon { width: 30px; height: 30px; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: .9rem; flex-shrink: 0; }
-    .form-fields { display: flex; flex-direction: column; gap: .9rem; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
-    .form-fields input, .form-fields select, .form-fields textarea { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: var(--sans); font-size: .9rem; padding: .82rem 1rem; outline: none; transition: border-color .2s; }
-    .form-fields select option { background: var(--option-bg); }
+    /* ═══════════════════════════════════════════════
+       CONTACT / CTA
+    ═══════════════════════════════════════════════ */
+    .contact-box {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 3rem;
+    }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.1fr;
+      gap: 3rem; align-items: start;
+    }
+    .contact-info h2 { margin-bottom: 0.85rem; }
+    .contact-info > p {
+      color: var(--muted); font-size: 0.92rem; line-height: 1.8;
+      margin-bottom: 1.75rem;
+    }
+    .contact-meta { display: flex; flex-direction: column; gap: 0.65rem; }
+    .contact-meta-item {
+      display: flex; align-items: center; gap: 0.7rem;
+      font-size: 0.84rem; color: var(--muted);
+    }
+    .contact-meta-icon {
+      width: 32px; height: 32px; background: var(--surface2);
+      border: 1px solid var(--border); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; flex-shrink: 0;
+    }
+    .form-fields { display: flex; flex-direction: column; gap: 0.85rem; }
+    .form-fields input, .form-fields textarea {
+      width: 100%; background: var(--bg); border: 1px solid var(--border);
+      border-radius: 10px; color: var(--text); font-family: var(--sans);
+      font-size: 0.9rem; padding: 0.85rem 1rem; outline: none;
+      transition: border-color var(--transition);
+    }
     .form-fields input::placeholder, .form-fields textarea::placeholder { color: var(--muted); }
-    .form-fields input:focus, .form-fields select:focus, .form-fields textarea:focus { border-color: var(--accent); }
-    .form-fields textarea { min-height: 115px; resize: vertical; }
-    .form-submit { background: var(--accent); color: #ffffff; border: none; font-family: var(--sans); font-weight: 600; font-size: .93rem; padding: .88rem 2rem; border-radius: 8px; cursor: pointer; width: 100%; transition: background .2s, transform .15s; }
+    .form-fields input:focus, .form-fields textarea:focus { border-color: var(--accent); }
+    .form-fields textarea { min-height: 100px; resize: vertical; }
+    .form-submit {
+      background: var(--accent); color: #ffffff; border: none;
+      font-family: var(--sans); font-weight: 600; font-size: 0.93rem;
+      padding: 0.88rem 2rem; border-radius: 10px; cursor: pointer;
+      width: 100%; transition: all var(--transition);
+    }
     .form-submit:hover { background: var(--accent-dark); transform: translateY(-1px); }
     .form-submit:disabled { opacity: .55; cursor: not-allowed; transform: none; }
-    .form-note { font-size: .72rem; color: var(--muted); text-align: center; }
-    .form-success { display: none; text-align: center; padding: 2.5rem 2rem; background: var(--accent-dim); border: 1px solid var(--accent); border-radius: var(--radius); }
+    .form-note { font-size: 0.72rem; color: var(--muted); text-align: center; margin-top: 0.25rem; }
+    .form-success {
+      display: none; text-align: center; padding: 2.5rem 2rem;
+      background: var(--accent-dim); border: 1px solid var(--accent);
+      border-radius: var(--radius);
+    }
     .form-success.visible { display: block; }
-    .form-success h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; margin-bottom: .5rem; }
-    .form-success p { font-size: .88rem; color: var(--muted); }
+    .form-success h3 {
+      font-family: var(--serif); font-size: 1.5rem; font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+    .form-success p { font-size: 0.88rem; color: var(--muted); }
+    .contact-or {
+      text-align: center; margin: 1.25rem 0; font-size: 0.78rem;
+      color: var(--muted); position: relative;
+    }
+    .contact-or::before, .contact-or::after {
+      content: ""; position: absolute; top: 50%;
+      width: calc(50% - 1.5rem); height: 1px; background: var(--border);
+    }
+    .contact-or::before { left: 0; }
+    .contact-or::after { right: 0; }
+    .btn-calendly {
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+      background: var(--accent); color: #ffffff; font-weight: 600;
+      font-size: 0.93rem; padding: 0.88rem 2rem; border-radius: 10px;
+      width: 100%; transition: all var(--transition);
+    }
+    .btn-calendly:hover { background: var(--accent-dark); transform: translateY(-1px); }
 
-    /* FOOTER */
-    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; font-size: .78rem; color: var(--muted); }
-    footer a { color: var(--accent); }
+    /* ═══════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════ */
+    footer {
+      border-top: 1px solid var(--border); padding: 2.5rem 2rem;
+      text-align: center;
+    }
+    .footer-inner {
+      max-width: 880px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-copy { font-size: 0.78rem; color: var(--muted); }
+    .footer-copy a { color: var(--accent); transition: color var(--transition); }
+    .footer-copy a:hover { color: var(--accent-dark); }
+    .footer-links { display: flex; gap: 1.25rem; }
+    .footer-links a {
+      font-size: 0.78rem; color: var(--muted);
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: var(--accent); }
 
-    /* RESPONSIVE */
+    /* ═══════════════════════════════════════════════
+       SECTION DIVIDER
+    ═══════════════════════════════════════════════ */
+    .divider {
+      max-width: 880px; margin: 0 auto;
+      border: none; height: 1px; background: var(--border);
+    }
+
+    /* ═══════════════════════════════════════════════
+       ANIMATIONS
+    ═══════════════════════════════════════════════ */
+    .fade-up {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible {
+      opacity: 1; transform: translateY(0);
+    }
+
+    /* ═══════════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════════ */
     @media (max-width: 768px) {
+      nav { padding: 0 1.25rem; }
       .nav-links { display: none; }
-      .stats { grid-template-columns: repeat(2,1fr); }
-      .stat { border-bottom: 1px solid var(--border); }
-      .services-grid, .trust-grid, .pricing-grid, .blog-grid { grid-template-columns: 1fr; }
-      .cs-cols { grid-template-columns: 1fr; }
+      section { padding: 4rem 1.25rem; }
+      .hero { padding: 5rem 1.25rem 3rem; min-height: 75vh; }
+      .services-grid { grid-template-columns: 1fr; }
+      .process-step { grid-template-columns: 50px 1fr; gap: 1rem; }
+      .process-dot { width: 34px; height: 34px; font-size: 0.72rem; }
+      .guarantee-grid { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
+      .contact-box { padding: 2rem 1.5rem; }
+      .footer-inner { flex-direction: column; gap: 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 2rem; }
+      .hero-sub { font-size: 0.95rem; }
+      .btn { padding: 0.75rem 1.4rem; font-size: 0.88rem; }
     }
   </style>
 </head>
 <body>
 
+<!-- ════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════ -->
 <nav id="top">
-  <img src="bhoomdom-logo.svg" alt="BhoomDom" class="nav-logo-img" style="height: 70px;">
+  <img src="bhoomdom-logo.svg" alt="BhoomDom" class="nav-logo-img">
   <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#why-it-works">Why it works</a></li>
-    <li><a href="#case-studies">Case Studies</a></li>
-    <li><a href="#calculator">Calculator</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#blog">Blog</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#services">What We Build</a></li>
+    <li><a href="#process">How We Work</a></li>
+    <li><a href="#tech">Tech Stack</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Start a Project</a></li>
   </ul>
   <div class="nav-actions">
-    <button id="theme-toggle" class="theme-btn">🌙 Dark</button>
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
     <a href="https://calendly.com/seeyou-bhoomdom/30min" target="_blank" class="nav-cta">Book a free call →</a>
   </div>
 </nav>
 
+<!-- ════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════ -->
 <div class="hero">
-  <span class="hero-badge">Solo AI Product Studio · Available for new projects</span>
-  <h1>Build software products from idea to production <em>without hiring a team.</em></h1>
-  <p class="hero-sub">BhoomDom uses AI-driven tooling to launch MVPs, SaaS platforms, marketplaces, and full-stack software — faster, cleaner, and globally. Agency quality. Startup speed.</p>
+  <span class="hero-badge">Product Studio · Currently accepting new projects</span>
+  <h1>We design and build software products <em>that work.</em></h1>
+  <p class="hero-sub">BhoomDom is a product studio that takes your idea from concept to production — MVPs, SaaS platforms, marketplaces, and full-stack web applications.</p>
   <div class="hero-actions">
-    <a href="https://calendly.com/seeyou-bhoomdom/30min" target="_blank" class="btn btn-primary">Book a free call</a>
-    <a href="#pricing" class="btn btn-ghost">See pricing →</a>
+    <a href="https://calendly.com/seeyou-bhoomdom/30min" target="_blank" class="btn btn-primary">Book a free discovery call</a>
+    <a href="#process" class="btn btn-ghost">See how we work ↓</a>
   </div>
 </div>
 
-<div class="stats">
-  <div class="stat"><span class="stat-num">30+</span><div class="stat-label">Projects shipped</div></div>
-  <div class="stat"><span class="stat-num">12</span><div class="stat-label">SaaS products</div></div>
-  <div class="stat"><span class="stat-num">10</span><div class="stat-label">Retainer clients</div></div>
-  <div class="stat"><span class="stat-num">95%</span><div class="stat-label">Satisfaction rate</div></div>
-  <div class="stat"><span class="stat-num">3</span><div class="stat-label">Countries served</div></div>
-</div>
+<hr class="divider">
 
-<section id="services">
+<!-- ════════════════════════════════════════════════
+     WHAT WE BUILD
+════════════════════════════════════════════════ -->
+<section id="services" class="fade-up">
   <div class="inner">
-    <div class="section-label">What we do</div>
-    <h2>Product engineering, launch, and managed growth.</h2>
+    <div class="section-label">What we build</div>
+    <h2>Products that solve real problems.</h2>
+    <p class="section-desc">We focus on production software — not prototypes that need to be rebuilt. Every project ships with clean architecture, proper auth, and real deployment.</p>
     <div class="services-grid">
-      <div class="service-card"><div class="service-num">01</div><h3>Full-stack product build</h3><p>End-to-end execution for startups and marketplaces from architecture to production.</p></div>
-      <div class="service-card"><div class="service-num">02</div><h3>MVP & SaaS delivery</h3><p>Production-ready platforms with validated UX, payments, and full deployment from day one.</p></div>
-      <div class="service-card"><div class="service-num">03</div><h3>Growth operations</h3><p>Ongoing support, optimization, and feature delivery to keep your product improving.</p></div>
-      <div class="service-card"><div class="service-num">04</div><h3>AI-accelerated development</h3><p>Faster execution using AI tooling — the same quality output in a fraction of the time.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="case-studies">
-  <div class="inner">
-    <div class="section-label">Real work</div>
-    <h2>Projects we've shipped.</h2>
-    <div class="case-studies">
-      <div class="cs-card">
-        <div class="cs-tag">Case Study 01 · Two-sided Marketplace · US Client</div>
-        <h3>A service marketplace from zero to 400 users — in 6 weeks.</h3>
-        <p>A founder with an 8-week runway needed a two-sided marketplace with payments, matching, and onboarding. No time for iteration.</p>
-        <div class="cs-cols">
-          <div class="cs-col"><label>Challenge</label><p>Build marketplace from scratch. Tight scope, non-negotiable timeline.</p></div>
-          <div class="cs-col"><label>Timeline</label><p>6 weeks. Launch event scheduled.</p></div>
-          <div class="cs-col"><label>Outcome</label><p>Shipped on schedule. 50 sign-ups in 48h. Now a retainer.</p></div>
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <h3>MVPs & Web Applications</h3>
+        <p>Validated products with authentication, payments, and deployment from day one. Built to learn from real users, not just to demo.</p>
+        <div class="service-tags">
+          <span class="service-tag">Auth & Roles</span>
+          <span class="service-tag">Payments</span>
+          <span class="service-tag">Dashboard</span>
+          <span class="service-tag">API</span>
         </div>
-        <div class="cs-result"><strong>Result:</strong> Launched ahead of schedule. First 50 users within 48 hours.</div>
       </div>
-
-      <div class="cs-card">
-        <div class="cs-tag">Case Study 02 · B2B SaaS · EU Client</div>
-        <h3>A $3k/mo analytics dashboard replaced with custom SaaS.</h3>
-        <p>A Berlin ops team was bleeding $3k/month on a tool that only covered 60% of their workflow. Agency quoted €80k and 6 months.</p>
-        <div class="cs-cols">
-          <div class="cs-col"><label>Challenge</label><p>Custom analytics dashboard integrating multiple data sources.</p></div>
-          <div class="cs-col"><label>Timeline</label><p>12 weeks before fiscal cycle.</p></div>
-          <div class="cs-col"><label>Outcome</label><p>Delivered in 8 weeks. Full ownership. 3 modules shipped since.</p></div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <h3>SaaS Platforms</h3>
+        <p>Multi-tenant architecture with subscription billing, admin panels, and analytics. Stripe integration, role-based access, and scalable infrastructure.</p>
+        <div class="service-tags">
+          <span class="service-tag">Multi-tenant</span>
+          <span class="service-tag">Stripe</span>
+          <span class="service-tag">RBAC</span>
+          <span class="service-tag">Analytics</span>
         </div>
-        <div class="cs-result"><strong>Result:</strong> $36k/year saved. Complete codebase ownership.</div>
       </div>
-
-      <div class="cs-card">
-        <div class="cs-tag">Case Study 03 · MVP Validation · India/US</div>
-        <h3>No-code idea → investor-ready MVP → $200k raised.</h3>
-        <p>Non-technical founder had a validated HR automation idea. Needed a working product to pitch to investors in 3 weeks.</p>
-        <div class="cs-cols">
-          <div class="cs-col"><label>Challenge</label><p>Polished, investor-ready MVP in record time.</p></div>
-          <div class="cs-col"><label>Timeline</label><p>3 weeks. Pitch meeting scheduled.</p></div>
-          <div class="cs-col"><label>Outcome</label><p>Shipped in 2.5 weeks. Closed $200k. 12 beta customers.</p></div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <h3>Marketplaces & Platforms</h3>
+        <p>Two-sided platforms with matching, onboarding flows, real-time features, search, filtering, messaging, and review systems.</p>
+        <div class="service-tags">
+          <span class="service-tag">Matching</span>
+          <span class="service-tag">Real-time</span>
+          <span class="service-tag">Search</span>
+          <span class="service-tag">Messaging</span>
         </div>
-        <div class="cs-result"><strong>Result:</strong> $200k raised. Now in paid beta with growth trajectory.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <h3>Ongoing Product Support</h3>
+        <p>Post-launch feature development, performance optimization, and infrastructure management. Monthly retainer, weekly updates.</p>
+        <div class="service-tags">
+          <span class="service-tag">Features</span>
+          <span class="service-tag">DevOps</span>
+          <span class="service-tag">Monitoring</span>
+          <span class="service-tag">Scaling</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="why-it-works">
+<hr class="divider">
+
+<!-- ════════════════════════════════════════════════
+     HOW WE WORK — PROCESS
+════════════════════════════════════════════════ -->
+<section id="process" class="fade-up">
   <div class="inner">
-    <div class="section-label">Why it works</div>
-    <h2>A solo studio that behaves like an agency.</h2>
-    <ul class="why-list">
-      <li><span class="why-check">✓</span> One point of accountability — no handoffs, no gaps</li>
-      <li><span class="why-check">✓</span> Lower overhead than agencies — you pay for execution</li>
-      <li><span class="why-check">✓</span> Faster iteration with AI workflows — what takes months, we ship in weeks</li>
-      <li><span class="why-check">✓</span> Senior engineering quality — experience without the team burden</li>
-    </ul>
-    <div class="quote-block">
-      <p>"We build full-stack products from idea to production, faster and leaner than agencies, with the quality of a senior engineering team."</p>
-      <cite>— BhoomDom, Solo AI Product Studio</cite>
-    </div>
-  </div>
-</section>
+    <div class="section-label">How we work</div>
+    <h2>Transparent process from day one.</h2>
+    <p class="section-desc">You'll know exactly what's happening at every stage. No black boxes, no surprises. Here's how every project moves forward.</p>
 
-<section>
-  <div class="inner">
-    <div class="section-label">Why trust us</div>
-    <h2>Guaranteed quality and delivery.</h2>
-    <div class="trust-grid">
-      <div class="trust-card"><h4>🔒 IP Protection</h4><p>Full ownership rights and NDA signed upfront.</p></div>
-      <div class="trust-card"><h4>🛠 30-Day Support</h4><p>Free bug fixes and support for one month post-launch.</p></div>
-      <div class="trust-card"><h4>⚡ AI-Enhanced Accuracy</h4><p>AI tooling for analysis and error-free code delivery.</p></div>
-      <div class="trust-card"><h4>📅 On-Time Delivery</h4><p>95% delivered on or ahead of schedule with weekly updates.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="pricing">
-  <div class="inner">
-    <div class="section-label">Pricing</div>
-    <h2>Transparent packages for global startup work.</h2>
-    <div class="pricing-grid">
-      <div class="pricing-card"><h3>MVP / Web App</h3><div class="price">$5k–$20k</div><p>Fast proof-of-concept with product-ready UX and deployment.</p></div>
-      <div class="pricing-card featured"><div class="pricing-feat-badge">Most popular</div><h3>SaaS Product</h3><div class="price">$15k–$50k</div><p>Professional SaaS with recurring revenue, auth, and payments.</p></div>
-      <div class="pricing-card"><h3>Managed Retainer</h3><div class="price">$2k–$5k/mo</div><p>Ongoing support, features, and optimization post-launch.</p></div>
-    </div>
-    <p style="margin-top:1.1rem; font-size:.81rem; color:var(--muted);">Billing in USD/EUR via Wise or Deel.</p>
-  </div>
-</section>
-
-<section id="calculator">
-  <div class="inner">
-    <div class="section-label">Project calculator</div>
-    <h2>Get an instant estimate.</h2>
-    <div class="calculator">
-      <div class="calc-fields">
-        <label for="calc-type">Project type</label>
-        <select id="calc-type">
-          <option value="">Select type</option>
-          <option value="mvp">MVP / Web App</option>
-          <option value="saas">SaaS Product</option>
-          <option value="marketplace">Marketplace</option>
-          <option value="retainer">Managed Retainer</option>
-        </select>
-
-        <label for="calc-complexity">Complexity</label>
-        <select id="calc-complexity">
-          <option value="">Select complexity</option>
-          <option value="low">Low</option>
-          <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
-
-        <button class="btn btn-primary" onclick="calculateQuote()">Calculate estimate</button>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="process-marker">
+          <div class="process-dot">01</div>
+          <div class="process-line"></div>
+        </div>
+        <div class="process-content">
+          <div class="process-phase">Discovery</div>
+          <div class="process-week">Free · 30-minute call</div>
+          <h3>We understand your idea, honestly.</h3>
+          <p>We learn about your product, timeline, and goals. You get a written scope document and an honest assessment — including whether we're the right fit. No sales pitch.</p>
+        </div>
       </div>
 
-      <div class="calc-result" id="calc-result">
-        <div style="font-size:.7rem; color:var(--muted); margin-bottom:.5rem; text-transform:uppercase;">Estimated range</div>
-        <div class="calc-price" id="calc-price">$5k–$20k</div>
-        <p id="calc-desc-out">Select project type and complexity.</p>
+      <div class="process-step">
+        <div class="process-marker">
+          <div class="process-dot">02</div>
+          <div class="process-line"></div>
+        </div>
+        <div class="process-content">
+          <div class="process-phase">Design & Architecture</div>
+          <div class="process-week">Week 1–2</div>
+          <h3>Wireframes and technical decisions — before any code.</h3>
+          <p>We design the user experience, database schema, and tech stack. You see everything and approve before development starts. First milestone payment here.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="process-marker">
+          <div class="process-dot">03</div>
+          <div class="process-line"></div>
+        </div>
+        <div class="process-content">
+          <div class="process-phase">Build & Ship</div>
+          <div class="process-week">Week 3–8 (varies by scope)</div>
+          <h3>Working software, every week.</h3>
+          <p>You see real, working demos every Friday — not slide decks or status emails. You can test, give feedback, and steer direction in real-time. Second milestone at midpoint.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="process-marker">
+          <div class="process-dot">04</div>
+          <div class="process-line"></div>
+        </div>
+        <div class="process-content">
+          <div class="process-phase">Launch & Handover</div>
+          <div class="process-week">Final week</div>
+          <h3>You own everything. We stick around.</h3>
+          <p>Full deployment, documentation, and knowledge transfer. Your repo, your infrastructure, your code — from day one. 30 days of free bug-fix support after launch.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="blog">
+<hr class="divider">
+
+<!-- ════════════════════════════════════════════════
+     TECH STACK
+════════════════════════════════════════════════ -->
+<section id="tech" class="fade-up">
   <div class="inner">
-    <div class="section-label">Resources</div>
-    <h2>Insights for startup founders.</h2>
-    <div class="blog-grid">
-      <div class="blog-card" onclick="openBlog(0)"><div class="blog-tag">Guide · 6 min</div><h4>How to build an MVP without hiring a team in 2025</h4><p>Practical guidance on launching fast without agencies or large teams.</p><div class="blog-read">Read →</div></div>
-      <div class="blog-card" onclick="openBlog(1)"><div class="blog-tag">Case study · 5 min</div><h4>From zero to SaaS in 4 weeks: AI-accelerated build story</h4><p>How solo studio replaced 6-month agency project in 4 weeks.</p><div class="blog-read">Read →</div></div>
-      <div class="blog-card" onclick="openBlog(2)"><div class="blog-tag">Comparison · 7 min</div><h4>Solo engineer vs agency: founder's honest breakdown</h4><p>Tradeoffs in cost, speed, quality — when to choose what.</p><div class="blog-read">Read →</div></div>
+    <div class="section-label">Tech stack</div>
+    <h2>We pick the right tool for the job.</h2>
+    <p class="section-desc">No religion about frameworks. We choose based on your product needs, team familiarity, and long-term maintainability.</p>
+
+    <div class="tech-categories">
+      <div class="tech-category">
+        <div class="tech-cat-label">Frontend</div>
+        <div class="tech-pills">
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">Next.js</span>
+          <span class="tech-pill">Vue.js</span>
+          <span class="tech-pill">TypeScript</span>
+          <span class="tech-pill">Tailwind CSS</span>
+          <span class="tech-pill">React Native</span>
+          <span class="tech-pill">Flutter</span>
+        </div>
+      </div>
+      <div class="tech-category">
+        <div class="tech-cat-label">Backend & Data</div>
+        <div class="tech-pills">
+          <span class="tech-pill">Node.js</span>
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">Go</span>
+          <span class="tech-pill">PostgreSQL</span>
+          <span class="tech-pill">MongoDB</span>
+          <span class="tech-pill">Redis</span>
+          <span class="tech-pill">Firebase</span>
+          <span class="tech-pill">Supabase</span>
+        </div>
+      </div>
+      <div class="tech-category">
+        <div class="tech-cat-label">Payments & Auth</div>
+        <div class="tech-pills">
+          <span class="tech-pill">Stripe</span>
+          <span class="tech-pill">Razorpay</span>
+          <span class="tech-pill">Auth0</span>
+          <span class="tech-pill">Clerk</span>
+          <span class="tech-pill">NextAuth</span>
+          <span class="tech-pill">Firebase Auth</span>
+        </div>
+      </div>
+      <div class="tech-category">
+        <div class="tech-cat-label">Infrastructure & DevOps</div>
+        <div class="tech-pills">
+          <span class="tech-pill">AWS</span>
+          <span class="tech-pill">GCP</span>
+          <span class="tech-pill">Vercel</span>
+          <span class="tech-pill">DigitalOcean</span>
+          <span class="tech-pill">Docker</span>
+          <span class="tech-pill">GitHub Actions</span>
+          <span class="tech-pill">Cloudflare</span>
+        </div>
+      </div>
+      <div class="tech-category">
+        <div class="tech-cat-label">Design & Collaboration</div>
+        <div class="tech-pills">
+          <span class="tech-pill">Figma</span>
+          <span class="tech-pill">Linear</span>
+          <span class="tech-pill">Notion</span>
+          <span class="tech-pill">Slack</span>
+          <span class="tech-pill">Loom</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="blog-modal" id="blog-modal">
-  <div class="blog-modal-inner">
-    <button class="blog-close" onclick="closeBlog()">✕</button>
-    <div class="blog-modal-tag" id="modal-tag"></div>
-    <h2 id="modal-title"></h2>
-    <div class="blog-meta" id="modal-meta"></div>
-    <div class="blog-body" id="modal-body"></div>
-  </div>
-</div>
+<hr class="divider">
 
-<section id="contact">
+<!-- ════════════════════════════════════════════════
+     STUDIO PHILOSOPHY (replaces About)
+════════════════════════════════════════════════ -->
+<section id="about" class="fade-up">
+  <div class="inner">
+    <div class="section-label">About us</div>
+    <h2>Built on honesty, not hype.</h2>
+    <div class="philosophy-content">
+      <p>We started BhoomDom because we saw too many founders overpay for software that took too long and didn't work well. Agencies charge for overhead. Large teams burn runway on coordination. The result is the same — late, over-budget, underwhelming.</p>
+      <p>We're engineers who build production software — the kind of systems that handle real users, real payments, and real scale. We use modern AI tooling to move faster, but <strong>every architecture decision, every critical system, and every deployment is deliberate.</strong></p>
+      <p>We're selective about the projects we take on because we commit fully to each one. If we don't think we're the right fit for what you're building, <strong>we'll tell you upfront — before you spend a single dollar.</strong></p>
+      <div class="philosophy-quote">
+        <p>"We'd rather lose a project by being honest than win one by overpromising."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ════════════════════════════════════════════════
+     GUARANTEE
+════════════════════════════════════════════════ -->
+<section id="guarantee" class="fade-up">
+  <div class="inner">
+    <div class="section-label">Our guarantee</div>
+    <h2>We know trust is earned, not claimed.</h2>
+    <p class="guarantee-intro">We're a studio building its reputation from scratch. Rather than making claims we can't back up, we make commitments we can. Here's what every client gets:</p>
+
+    <div class="guarantee-grid">
+      <div class="guarantee-card">
+        <div class="guarantee-icon">✓</div>
+        <div>
+          <h4>Milestone-based payments</h4>
+          <p>You never pay for work you haven't seen. Payments are tied to deliverables you approve, not timelines.</p>
+        </div>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-icon">✓</div>
+        <div>
+          <h4>Weekly working demos</h4>
+          <p>Real, working software every Friday. Not status updates — actual builds you can click through and test.</p>
+        </div>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-icon">✓</div>
+        <div>
+          <h4>Full code ownership</h4>
+          <p>Your repository, your infrastructure, your intellectual property. From day one, not just at handover.</p>
+        </div>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-icon">✓</div>
+        <div>
+          <h4>30-day bug-fix support</h4>
+          <p>Free post-launch support for one month. If something breaks that we built, we fix it — no questions asked.</p>
+        </div>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-icon">✓</div>
+        <div>
+          <h4>Honest scoping</h4>
+          <p>If we can't build it well within your budget and timeline, we'll say so before you pay. No bait and switch.</p>
+        </div>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-icon">✓</div>
+        <div>
+          <h4>Direct communication</h4>
+          <p>You talk to the people who write the code. No account managers, no layers, no telephone game.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ════════════════════════════════════════════════
+     CONTACT / START A PROJECT
+════════════════════════════════════════════════ -->
+<section id="contact" class="fade-up">
   <div class="inner">
     <div class="contact-box">
       <div class="contact-grid">
         <div class="contact-info">
-          <h2>Let's talk about your idea.</h2>
-          <p>Tell us your vision, timeline, and goals. We'll get back to you in 24 hours with a realistic plan.</p>
+          <div class="section-label">Start a project</div>
+          <h2>Let's talk about what you're building.</h2>
+          <p>Tell us about your idea, timeline, and goals. We'll get back to you within 24 hours with an honest assessment and next steps.</p>
           <div class="contact-meta">
-            <div class="contact-meta-item"><div class="contact-meta-icon">📧</div><div><strong>Email</strong><div style="font-size:.78rem;color:var(--muted);">seeyou@bhoomdom.com</div></div></div>
-            <div class="contact-meta-item"><div class="contact-meta-icon">🌍</div><div><strong>Based in</strong><div style="font-size:.78rem;color:var(--muted);">India / Globally remote</div></div></div>
-            <div class="contact-meta-item"><div class="contact-meta-icon">⏱</div><div><strong>Response time</strong><div style="font-size:.78rem;color:var(--muted);">24 hours</div></div></div>
+            <div class="contact-meta-item">
+              <div class="contact-meta-icon">📧</div>
+              <div>
+                <strong>Email</strong>
+                <div style="font-size:.78rem;color:var(--muted);">seeyou@bhoomdom.com</div>
+              </div>
+            </div>
+            <div class="contact-meta-item">
+              <div class="contact-meta-icon">🌍</div>
+              <div>
+                <strong>Availability</strong>
+                <div style="font-size:.78rem;color:var(--muted);">Globally remote · All timezones</div>
+              </div>
+            </div>
+            <div class="contact-meta-item">
+              <div class="contact-meta-icon">⏱</div>
+              <div>
+                <strong>Response time</strong>
+                <div style="font-size:.78rem;color:var(--muted);">Within 24 hours</div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <form id="contact-form" class="form-fields" onsubmit="submitForm(event)">
-          <input type="hidden" name="access_key" value="b41cdeb8-fc8c-4672-96a1-3a43ed1f71f2">
-          <div><label>Name *</label><input type="text" name="name" required></div>
-          <div><label>Email *</label><input type="email" name="email" required></div>
-          <div><label>Company / Project</label><input type="text" name="company"></div>
-          <div><label>Project brief *</label><textarea name="message" required placeholder="What are you building? Timeline?"></textarea></div>
-          <button type="submit" class="form-submit" id="submit-btn">Send message →</button>
-          <p class="form-note">Your message is encrypted and will only be seen by us.</p>
-        </form>
+        <div>
+          <a href="https://calendly.com/seeyou-bhoomdom/30min" target="_blank" class="btn-calendly" id="calendly-cta">
+            📅 Book a free 30-minute discovery call
+          </a>
 
-        <div id="form-success" class="form-success">
-          <h3>Got it — thanks for reaching out!</h3>
-          <p>We'll review your project and send you a reply within 24 hours.</p>
+          <div class="contact-or">or send a message</div>
+
+          <form id="contact-form" class="form-fields" onsubmit="submitForm(event)">
+            <input type="hidden" name="access_key" value="b41cdeb8-fc8c-4672-96a1-3a43ed1f71f2">
+            <input type="text" name="name" placeholder="Your name *" required>
+            <input type="email" name="email" placeholder="Email address *" required>
+            <textarea name="message" required placeholder="What are you building? What's the timeline?"></textarea>
+            <button type="submit" class="form-submit" id="submit-btn">Send message →</button>
+            <p class="form-note">We respond within 24 hours. Your message is private.</p>
+          </form>
+
+          <div id="form-success" class="form-success">
+            <h3>Got it — thanks for reaching out.</h3>
+            <p>We'll review your project and send you a thoughtful reply within 24 hours.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
 <footer>
-  <p>© 2025 BhoomDom · Solo AI Product Studio · <a href="mailto:seeyou@bhoomdom.com">seeyou@bhoomdom.com</a></p>
+  <div class="footer-inner">
+    <div class="footer-copy">© 2025 BhoomDom · Product Studio · <a href="mailto:seeyou@bhoomdom.com">seeyou@bhoomdom.com</a></div>
+    <div class="footer-links">
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </div>
 </footer>
 
+<!-- ════════════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════════ -->
 <script>
-// Theme toggle functionality
+// ── Theme Toggle ──────────────────────────────
 const themes = {
   light: {
-    '--bg': '#f5f3ee', '--surface': '#ffffff', '--surface2': '#f8f6f0', '--border': 'rgba(0,0,0,0.1)',
-    '--text': '#0d0d0d', '--muted': '#7a7a7a', '--accent': '#0047FF', '--accent-dim': 'rgba(0,71,255,0.08)',
-    '--accent-dark': '#0033cc', '--nav-bg': 'rgba(245,243,238,0.92)', '--option-bg': '#ffffff'
+    '--bg': '#f5f3ee', '--surface': '#ffffff', '--surface2': '#f8f6f0',
+    '--surface3': '#efece5', '--border': 'rgba(0,0,0,0.08)',
+    '--border-strong': 'rgba(0,0,0,0.14)',
+    '--text': '#0d0d0d', '--text-secondary': '#3d3d3d', '--muted': '#7a7a7a',
+    '--accent': '#0047FF', '--accent-dim': 'rgba(0,71,255,0.06)',
+    '--accent-mid': 'rgba(0,71,255,0.12)', '--accent-dark': '#0033cc',
+    '--green': '#16a34a', '--green-dim': 'rgba(22,163,74,0.08)',
+    '--nav-bg': 'rgba(245,243,238,0.92)', '--option-bg': '#ffffff',
+    '--shadow-sm': '0 1px 3px rgba(0,0,0,0.04)',
+    '--shadow-md': '0 4px 16px rgba(0,0,0,0.06)'
   },
   dark: {
-    '--bg': '#0b0b0b', '--surface': '#141414', '--surface2': '#1c1c1c', '--border': '#262626',
-    '--text': '#f0ede8', '--muted': '#888480', '--accent': '#c8f04a', '--accent-dim': 'rgba(200,240,74,0.08)',
-    '--accent-dark': '#9bbf2e', '--nav-bg': 'rgba(11,11,11,0.88)', '--option-bg': '#1c1c1c'
+    '--bg': '#0a0a0a', '--surface': '#141414', '--surface2': '#1c1c1c',
+    '--surface3': '#222222', '--border': 'rgba(255,255,255,0.08)',
+    '--border-strong': 'rgba(255,255,255,0.14)',
+    '--text': '#f0ede8', '--text-secondary': '#c8c4bc', '--muted': '#888480',
+    '--accent': '#c8f04a', '--accent-dim': 'rgba(200,240,74,0.06)',
+    '--accent-mid': 'rgba(200,240,74,0.14)', '--accent-dark': '#9bbf2e',
+    '--green': '#4ade80', '--green-dim': 'rgba(74,222,128,0.1)',
+    '--nav-bg': 'rgba(10,10,10,0.88)', '--option-bg': '#1c1c1c',
+    '--shadow-sm': '0 1px 3px rgba(0,0,0,0.2)',
+    '--shadow-md': '0 4px 16px rgba(0,0,0,0.3)'
   }
 };
 
 function applyTheme(theme) {
   const root = document.documentElement;
-  Object.keys(themes[theme]).forEach(prop => {
-    root.style.setProperty(prop, themes[theme][prop]);
+  Object.entries(themes[theme]).forEach(([prop, val]) => {
+    root.style.setProperty(prop, val);
   });
-  // Update nav background
-  document.querySelector('nav').style.background = themes[theme]['--nav-bg'];
-  // Update button colors
+  // Update button text colors for dark mode
   const navCta = document.querySelector('.nav-cta');
   const btnPrimary = document.querySelectorAll('.btn-primary');
   const formSubmit = document.querySelector('.form-submit');
-  if (theme === 'dark') {
-    navCta.style.color = '#0b0b0b';
-    btnPrimary.forEach(btn => btn.style.color = '#0b0b0b');
-    if (formSubmit) formSubmit.style.color = '#0b0b0b';
-  } else {
-    navCta.style.color = '#ffffff';
-    btnPrimary.forEach(btn => btn.style.color = '#ffffff');
-    if (formSubmit) formSubmit.style.color = '#ffffff';
-  }
+  const calendlyCta = document.querySelector('.btn-calendly');
+  const color = theme === 'dark' ? '#0b0b0b' : '#ffffff';
+  if (navCta) navCta.style.color = color;
+  btnPrimary.forEach(btn => btn.style.color = color);
+  if (formSubmit) formSubmit.style.color = color;
+  if (calendlyCta) calendlyCta.style.color = color;
 }
 
 function updateThemeButton(theme) {
-  const btn = document.getElementById('theme-toggle');
-  btn.textContent = theme === 'light' ? '🌙' : '☀️';
+  document.getElementById('theme-toggle').textContent = theme === 'light' ? '🌙' : '☀️';
 }
 
 function toggleTheme() {
-  const currentTheme = localStorage.getItem('theme') || 'light';
-  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-  localStorage.setItem('theme', newTheme);
-  applyTheme(newTheme);
-  updateThemeButton(newTheme);
+  const current = localStorage.getItem('theme') || 'light';
+  const next = current === 'light' ? 'dark' : 'light';
+  localStorage.setItem('theme', next);
+  applyTheme(next);
+  updateThemeButton(next);
 }
 
-// Initialize theme on load
-document.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  applyTheme(savedTheme);
-  updateThemeButton(savedTheme);
-  document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
-});
+// ── Scroll Reveal ─────────────────────────────
+function initScrollReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-function calculateQuote() {
-  const type = document.getElementById('calc-type').value;
-  const complexity = document.getElementById('calc-complexity').value;
-  if (!type || !complexity) { alert('Please select both type and complexity.'); return; }
-  const matrix = {
-    mvp:         { low: '$5k–$8k', medium: '$9k–$15k', high: '$15k–$22k' },
-    saas:        { low: '$10k–$18k', medium: '$18k–$30k', high: '$30k–$50k' },
-    marketplace: { low: '$12k–$20k', medium: '$20k–$35k', high: '$35k–$60k' },
-    retainer:    { low: '$2k/mo', medium: '$3k–$3.5k/mo', high: '$4k–$5k/mo' },
-  };
-  document.getElementById('calc-price').textContent = matrix[type][complexity];
-  document.getElementById('calc-result').classList.add('visible');
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 }
 
+// ── Form Submission ───────────────────────────
 async function submitForm(e) {
   e.preventDefault();
   const btn = document.getElementById('submit-btn');
-  btn.textContent = 'Sending…'; btn.disabled = true;
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
   const form = document.getElementById('contact-form');
   const data = Object.fromEntries(new FormData(form));
   try {
-    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
     const result = await res.json();
     if (result.success) {
       form.style.display = 'none';
       document.getElementById('form-success').classList.add('visible');
     } else {
-      btn.textContent = 'Send message →'; btn.disabled = false;
-      alert('Something went wrong. Email seeyou@bhoomdom.com instead.');
+      btn.textContent = 'Send message →';
+      btn.disabled = false;
+      alert('Something went wrong. Please email seeyou@bhoomdom.com directly.');
     }
   } catch {
-    btn.textContent = 'Send message →'; btn.disabled = false;
-      alert('Network error. Email seeyou@bhoomdom.com instead.');
+    btn.textContent = 'Send message →';
+    btn.disabled = false;
+    alert('Network error. Please email seeyou@bhoomdom.com directly.');
   }
 }
 
-const blogs = [
-  { tag: 'Guide · 6 min read', title: 'How to build an MVP without hiring a team in 2025', meta: 'By BhoomDom · April 2025', body: '<h3>Why solo MVPs are winning</h3><p>Early-stage startups can no longer justify large teams. The fastest-growing companies use solo engineers and AI workflows.</p><h3>The playbook</h3><p><strong>1. Start with one clear problem.</strong> Don\'t build a platform.</p><p><strong>2. Use modern tools where they fit.</strong> Vercel, Stripe, Auth0 — focus on your unique value.</p><p><strong>3. Design for simplicity.</strong> Every feature adds complexity. Ship simple, iterate.</p><p><strong>4. Use AI as co-pilot.</strong> Cursor and Copilot handle boilerplate. Spend time on architecture and UX.</p><p><strong>5. Launch before you\'re ready.</strong> 60% confidence beats perfect never.</p><p>Ready to build? <a href="#contact" style="color:var(--accent)">Get in touch</a>.</p>' },
-  { tag: 'Case study · 5 min', title: 'From zero to SaaS in 4 weeks', meta: 'By BhoomDom · March 2025', body: '<h3>The brief</h3><p>Non-technical founder, validated idea, 4 weeks to show investors a working product.</p><h3>The challenge</h3><p>Real-time sync, custom workflows, payments, role-based access, professional UI.</p><h3>How we did it</h3><p><strong>Week 1:</strong> Design sprint with Figma + v0.dev.<br><strong>Week 2-3:</strong> Full-stack build with Cursor + GitHub Copilot.<br><strong>Week 4:</strong> Polish, test, deploy.</p><h3>The result</h3><p>50 users by day 28. 92% retention. Closed a $500k round.</p><p>What takes 6 months normally took 4 weeks.</p>' },
-  { tag: 'Comparison · 7 min', title: 'Solo engineer vs agency breakdown', meta: 'By BhoomDom · February 2025', body: '<h3>The tradeoff</h3><p><strong>Solo:</strong> 3-8 weeks, $8k-$20k. High quality if experienced.<br><strong>Agency:</strong> 12-24 weeks, $40k-$150k. Variable quality.<br><strong>In-house:</strong> 20-40 weeks, $120k-$400k/mo. High quality if managed.</p><h3>When to hire solo</h3><p>Validated idea, need speed, care about cost, want single contact.</p><h3>When to hire agency</h3><p>Need multiple specialists, flexible timeline, avoid hiring burden.</p><h3>When to build in-house</h3><p>Funded $500k+, need to scale fast, complex product, building culture.</p><p>Not sure? <a href="#contact" style="color:var(--accent)">Let\'s talk.</a></p>' }
-];
-
-function openBlog(i) {
-  const b = blogs[i];
-  document.getElementById('modal-tag').textContent = b.tag;
-  document.getElementById('modal-title').textContent = b.title;
-  document.getElementById('modal-meta').textContent = b.meta;
-  document.getElementById('modal-body').innerHTML = b.body;
-  document.getElementById('blog-modal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeBlog() {
-  document.getElementById('blog-modal').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-document.getElementById('blog-modal').addEventListener('click', function(e) { if (e.target === this) closeBlog(); });
+// ── Initialize ────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  applyTheme(savedTheme);
+  updateThemeButton(savedTheme);
+  document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+  initScrollReveal();
+});
 </script>
 
 </body>
